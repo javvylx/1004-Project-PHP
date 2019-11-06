@@ -94,7 +94,7 @@
 								<li>Review your previous purchases</li>
 							</ul>
 							<form>
-								<a href="Sign Up.php"> <input type="button" class="btn btn-primary btn-lg" value="Create Account" name="create_account" /></a>
+								<a href="Sign Up.html"> <input type="button" class="btn btn-primary btn-lg" value="Create Account" name="create_account" /></a>
 							</form>
 						</div>
 					</div>
