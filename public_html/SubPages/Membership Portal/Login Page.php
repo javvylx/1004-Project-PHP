@@ -21,9 +21,29 @@
 </head>
 
 <body>
+<<<<<<< HEAD
  <?php
     include "../../header.php";
     ?>
+=======
+
+	<!-- Header-->
+	<?php include "../../header.php"; ?>
+	<!-- Header-->
+
+
+	<!--Start of Breadcrumb -->
+	<div class="container-fluid-remove-paddings">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="../../Watchme_Landing_Page.php">Home</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Membership Portal</li>
+			</ol>
+		</nav>
+	</div>
+	<!--End of Breadcrumb -->
+
+>>>>>>> a9467a5c47e17cd3e3827a18ae5176c08c216e17
 
 	<!--Start of contents -->
 	<div class="container-fluid form">
@@ -44,7 +64,11 @@
 								<li>Review your previous purchases</li>
 							</ul>
 							<form>
+<<<<<<< HEAD
                                                             <a href="Sign Up.php"> <input type="button" class="btn btn-primary btn-lg" value="Create Account" name="create_account" /></a>
+=======
+								<a href="Sign Up.php"> <input type="button" class="btn btn-primary btn-lg" value="Create Account" name="create_account" /></a>
+>>>>>>> a9467a5c47e17cd3e3827a18ae5176c08c216e17
 							</form>
 						</div>
 					</div>
@@ -82,11 +106,17 @@
 	</div>
 	<!--End of contents -->
 
+<<<<<<< HEAD
 	<!--Start of footer-->
 	<?php
         include "../../footer.php";
         ?>
 	<!--End of footer-->
+=======
+	<!--footer-->
+	<?php include "../../footer.php" ?>
+	<!--footter-->
+>>>>>>> a9467a5c47e17cd3e3827a18ae5176c08c216e17
 
 
 	<!--JS Plug In-->

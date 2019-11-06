@@ -30,6 +30,4 @@ function sanitize($data)
  return $data;
 }
 
-
-
  ?>
