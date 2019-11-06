@@ -21,23 +21,9 @@
 </head>
 
 <body>
-
-	<!-- Header-->
-	<?php include "../../header.php"; ?>
-	<!-- Header-->
-
-
-	<!--Start of Breadcrumb -->
-	<div class="container-fluid-remove-paddings">
-		<nav aria-label="breadcrumb">
-			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="../../Watchme_Landing_Page.php">Home</a></li>
-				<li class="breadcrumb-item active" aria-current="page">Membership Portal</li>
-			</ol>
-		</nav>
-	</div>
-	<!--End of Breadcrumb -->
-
+	<?php
+    include "../../header.php";
+    ?>
 
 	<!--Start of contents -->
 	<div class="container-fluid form">
@@ -72,12 +58,12 @@
 							<div class="col-lg-10 col-xl-7 mx-auto">
 								<h3 class="display-4">Watch.Me!</h3>
 								<p class="text-muted mb-4">Sign in into your account</p>
-								<form>
+								<form action="process_login.php" method="post">
 									<div class="form-group mb-3">
-										<input id="inputEmail" type="email" placeholder="Email address" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+										<input id="inputEmail" type="email" placeholder="Email address" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4" name="Email">
 									</div>
 									<div class="form-group mb-3">
-										<input id="inputPassword" type="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+										<input id="inputPassword" type="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary" name="Password">
 									</div>
 									<div class="custom-control custom-checkbox mb-3">
 										<input id="customCheck1" type="checkbox" checked class="custom-control-input">
@@ -96,9 +82,11 @@
 	</div>
 	<!--End of contents -->
 
-	<!--footer-->
-	<?php include "../../footer.php" ?>
-	<!--footter-->
+	<!--Start of footer-->
+	<?php
+        include "../../footer.php";
+        ?>
+	<!--End of footer-->
 
 
 	<!--JS Plug In-->

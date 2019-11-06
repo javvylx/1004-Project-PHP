@@ -48,7 +48,7 @@
 
     <form action="process_contactus.php" method="post">
       <div>
-        <input type="text" name="fname" class="form-control1 center" placeholder="Enter First Name">
+        <input type="text" name="fname" class="form-control1 center" placeholder="Enter First Name" required pattern='(?=.*[a-z])(?=.*[A-Z]).{3,}'>
       </div>
       <br>
       <div>
@@ -60,11 +60,11 @@
       </div>
       <br>
       <div>
-        <input type="text" name="subject" class="form-control1 center" placeholder="Enter Subject" required>
+        <input type="text" name="subject" class="form-control1 center" placeholder="Enter Subject" required pattern='(?=.*[a-z])(?=.*[A-Z]).{1,}'>
       </div>
       <br>
       <div>
-        <textarea name="message" class="form-control2 center" rows="5" placeholder="Message" required></textarea>
+        <textarea name="message" class="form-control2 center" rows="5" placeholder="Message" required '(?=.*[a-z])(?=.*[A-Z]).{5,}'></textarea>
       </div>
 
       <input type="Submit" value="Submit" class="btn btn-danger padding2 center">
