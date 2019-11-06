@@ -26,7 +26,7 @@ if (check_empty($password)){
   $errorMsg .= "Password Required \n";
 }
 
-if ($sucess){ // if everything is okay and log in,
+if ($success){ // if everything is okay and log in,
   //insert session code here
 }
 

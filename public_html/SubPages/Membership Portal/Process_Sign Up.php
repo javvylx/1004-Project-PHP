@@ -86,7 +86,6 @@ include '../Function.php';
   <link rel="shortcut icon" type="image/x-icon" href="../../images/Favicon/favicon.png">
 
   <!-- Bootstrap -->
-  <link href="../../css/bootstrap-css.min.css" rel="stylesheet" type="text/css" />
   <link href="../../css/bootstrap.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -102,33 +101,33 @@ include '../Function.php';
 
 <!-- Start of Contents -->
 
-    <div class ="container-fluid register">
-        <form method="post">
-            <div class="form-group">
+                <div class ="container-fluid py-5 px-5">
                 <?php
                 if($success){
                 echo "<h2>Your registration is successful!</h2>";
-                echo "<h4>Thanks for signing up " . $firstname . ".</h4>";
+                echo "<h4 class='py-3'>Thanks for signing up " . $firstname . ".</h4>";
 
                 ?>
-                <input class="btn btn-default" type="button" value="Log-in"
+                <input class="btn btn-primary" type="button" value="Log-in"
                 onclick="window.location.href='Sign Up.php'" />
-                <input class="btn btn-default" type="button" value="Home"
+                <input class="btn btn-primary" type="button" value="Home"
                 onclick="window.location.href='../../Watchme_Landing_Page.php'" />
 
-                <?php }else{
+                <?php }
+                else{
                 echo "<h2>Oops!</h2>";
-                echo "<h4>The following input errors were detected:</h4>";
+                echo "<h4 class='py-3'>The following input errors were detected:</h4>";
                 echo $error;
-
+              }
                 ?>
-                <input class="btn btn-default" type="button" value="Return to Sign up"
-                onclick="window.location.href='Sign Up.php'" />
-                <?php } ?>
-            </div>
-        </form>
+                <div class="py-5">
+                  <input class="btn btn-primary" type="button" value="Return to Sign up"
+                  onclick="window.location.href='Sign Up.php'" />
 
-    </div>
+                </div>
+
+
+            </div>
 
     <?php
     include "../../footer.php";
