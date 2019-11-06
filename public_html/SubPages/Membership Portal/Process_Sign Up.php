@@ -118,13 +118,13 @@ include '../Function.php';
                 echo "<h2>Oops!</h2>";
                 echo "<h4 class='py-3'>The following input errors were detected:</h4>";
                 echo $error;
-              }
                 ?>
                 <div class="py-5">
                   <input class="btn btn-primary" type="button" value="Return to Sign up"
                   onclick="window.location.href='Sign Up.php'" />
-
                 </div>
+              <?php } ?>
+
 
 
             </div>
