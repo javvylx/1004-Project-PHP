@@ -57,7 +57,7 @@
 
 
   <section class="container">
-	<form action="Process_Sign Up.php" name="myForm" onsubmit="return validateForm()" method="POST">
+	<form action="Process_Sign Up.php" method="POST">
 		<div class ="form-group">
 		  <label for ="firstname">First Name:</label>
 		  <input type='text' class =' form-control'id='firstname'placeholder='Enter first name' name='firstname'  required pattern='[A-Za-z]{3,}'>

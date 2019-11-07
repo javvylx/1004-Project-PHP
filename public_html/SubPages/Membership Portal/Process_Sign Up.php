@@ -2,6 +2,10 @@
 
 include '../Function.php';
 
+define("DBHOST", "161.117.122.252");
+define("DBNAME", "p5_7");
+define("DBUSER", "p5_7");
+define("DBPASS", "Q2Zp6mlCeq");
 
 // First Name Validation
   $error="";
@@ -53,7 +57,16 @@ include '../Function.php';
         }
     }
     $error.=$errorMsg;
-
+    // Password Validation 
+    $password = $errorMsg = "";
+    $success = true;
+    if (empty($_POST["password"])) {
+        $errorMsg .= "Password is required.<br>";
+        $success = false;
+	} else {
+        $confirm_password = sanitize($_POST["password"]);		
+	}
+    $error .= $errorMsg;
     // Password Validation
     $password = $errorMsg = "";
     $success = true;
@@ -73,7 +86,7 @@ include '../Function.php';
     $register='Sign Up.php';
     $home = '../../Watchme_Landing_Page.php';
 
-
+    saveMemberToDB();
     ?>
 
 <!DOCTYPE html>
