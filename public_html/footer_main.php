@@ -15,22 +15,6 @@
           <li><a href="SubPages/Contact Us/Contact Us.php"><i class="fa fa-angle-double-right"></i>Contact Us</a></li>
         </ul>
       </div>
-      <div class="col-xs-12 col-sm-4 col-md-4">
-        <h5>NewsLetter</h5>
-        <ul class="list-unstyled links">
-                      <div id="mc_embed_signup"> <!-- NewsLetter -->
-                          <form target="_blank"
-                              action="javascript:void();"
-                              method="get" class="subscribe_form relative mail_part">
-                              <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
-                                  class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
-                                  onblur="this.placeholder = ' Email Address '">
-                              <button type="submit" name="submit" id="newsletter-submit"
-                                  class="email_icon newsletter-submit button-contactForm">Subscribe</button>
-                          </form>
-          </div>
-        </ul>
-      </div>
     </div>
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">

@@ -1,3 +1,38 @@
+<?php
+include '../Function.php';
+$email = $password = "";
+$errorMsg = "";
+$success = true;
+$email = sanitize($_POST["Email"]);
+$password = sanitize($_POST["Password"]);
+
+if (check_empty($email))
+{
+    $errorMsg .= "Email Required \n";
+}
+else {
+  if (filter_var($email,FILTER_VALIDATE_EMAIL))
+  {
+    $success *= true;
+  }
+  else {
+    $success *= false;
+    $errorMsg .= "Invalid email format. \n";
+  }
+}
+
+
+if (check_empty($password)){
+  $errorMsg .= "Password Required \n";
+}
+
+if ($success){ // if everything is okay and log in,
+  //insert session code here
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -23,33 +58,17 @@
         <!-- Header-->
 
         <!-- Codes to be implemented [Content] -->
-        <div class="container">
-            <?php
-            include '../Function.php';
-            $Email = "";
-            $Password = "";
-            $errorMsg = "";
-            $success = true;
-            check_empty($_POST["Email"]);
-            check_empty($_POST["Password"]);
-            if (!filter_var($Email, FILTER_VALIDATE_EMAIL)) {
-                $errorMsg .= "Invalid email format.";
-                $success = false;
-            }
-            $Email = sanitize_input($_POST["Email"]);
+        <div class="container py-5">
+          <?php if ($success):  ?>
+            <h2>Login successful!</h2><br>
+            <h3> Welcome back! </h3><br>
+            <a href='../../Watchme_Landing_Page.php'><button type='button' class='btn btn-outline-secondary'>Return to Home</button></a>
+          <?php else:  ?>
+            <h2>Login was unsuccessful!</h2><br>
+            <p> Please try again!</p><br>
+            <a href='Login Page.php'><button type='button' class='btn btn-outline-secondary'>Return to Login</button></a>
+          <?php endif; ?>
 
-            $Password = sanitize_input($_POST["Password"]);
-
-            if ($success) {
-                echo "<h2>Login successful!</h2><br>";
-                echo '<h3> Welcome back! </h3><br>';
-                echo "<a href='Watchme_Landing_Page.php'><button type='button' class='btn btn-outline-secondary'>Return to Home</button></a> ";
-            } else {
-                echo "<h2>Login was unsuccessful!</h2><br>";
-                echo '<p> Please try again!</p><br>';
-                echo "<a href='Login Page.php'><button type='button' class='btn btn-outline-secondary'>Return to Login</button></a> ";
-            }
-            ?>
         </div>
         <!--footer-->
         <?php include "../../footer.php" ?>
@@ -63,11 +82,3 @@
     </body>
 
 </html>
-
-
-/* 
-* To change this license header, choose License Headers in Project Properties.
-* To change this template file, choose Tools | Templates
-* and open the template in the editor.
-*/
-
