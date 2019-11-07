@@ -1,5 +1,11 @@
 <?php
 include '../Function.php';
+
+define("DBHOST", "161.117.122.252");
+define("DBNAME", "p5_7");
+define("DBUSER", "p5_7");
+define("DBPASS", "Q2Zp6mlCeq");
+
 $email = $password = "";
 $errorMsg = "";
 $success = true;
@@ -25,6 +31,8 @@ else {
 if (check_empty($password)){
   $errorMsg .= "Password Required \n";
 }
+
+loginToDB();
 
 if ($success){ // if everything is okay and log in,
   //insert session code here
