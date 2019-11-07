@@ -41,25 +41,8 @@
 <div class="container">
     <h3 class="h3 titlepadding"><u>Casual Watches</u></h3> <!--Title - Casual Watches -->
     <div class="row">
-
+		
 <!--Casual Product 1-->
-		<div class="col-md-3 col-sm-6">
-            <div class="productoverview">
-                <div class="producthoverimage">
-                    <a href="../Individual Product Pages/Casual Pulsar Solar PZ6003X1.php">
-                        <img class="pic-1" src="../../images/Casual Watches/1/Casual 1 Pulsar Solar PZ6003X1.jpg" alt="Pulsar Solar PZ6003X1 Watch Face" title="Pulsar Solar PZ6003X1 Watch Face"> <!--Image 1-->
-                        <img class="pic-2" src="../../images/Casual Watches/1/Casual 1 Pulsar Solar PZ6003X1 (2).jpg" alt="Pulsar Solar PZ6003X1 Watch Strap" title="Pulsar Solar PZ6003X1 Watch Strap"> <!--Image 1-->
-                    </a>
-                    <a class="add-to-cart" href="../Shopping Cart/Shopping Cart.php">Add to cart</a>
-                </div>
-                <div class="product-content">
-                    <h3 class="title"><a href="../Individual Product Pages/Casual Pulsar Solar PZ6003X1.php">Pulsar Solar Watch PZ6003X1</a></h3>
-                    <span class="price">S$145.39</span>
-                </div>
-            </div>
-        </div>
-
-<!--Casual Product 2-->
         <div class="col-md-3 col-sm-6">
             <div class="productoverview">
               <div class="producthoverimage">
@@ -76,40 +59,26 @@
             </div>
         </div>
 
-<!--Casual Product 3-->
-        <div class="col-md-3 col-sm-6">
-            <div class="productoverview">
-                <div class="producthoverimage">
-                    <a href="../Individual Product Pages/Casual Pulsar PS9527X1.php">
-                        <img class="pic-1" src="../../images/Casual Watches/3/Casual 3 Pulsar PS9527X1.jpg" alt="Pulsar PS9527X1 Watch Face" title="Pulsar PS9527X1 Watch Face"> <!--Image 3-->
-                        <img class="pic-2" src="../../images/Casual Watches/3/Casual 3 Pulsar PS9527X1 (2).jpg" alt="Pulsar PS9527X1 Watch Strap" title="Pulsar PS9527X1 Watch Strap"> <!--Image 3-->
-                    </a>
-                    <a class="add-to-cart" href="../Shopping Cart/Shopping Cart.php">Add to cart</a>
-                </div>
-                <div class="product-content">
-                    <h3 class="title"><a href="../Individual Product Pages/Casual Pulsar PS9527X1.php">Pulsar Dress Watch PS9527X1</a></h3>
-                    <span class="price">S$150.56</span>
-                </div>
-            </div>
-        </div>
-
-<!--Casual Product 4-->
-        <div class="col-md-3 col-sm-6">
-            <div class="productoverview">
-                <div class="producthoverimage">
-                    <a href="../Individual Product Pages/Casual Hugo ONYX HB1513367.php">
-                        <img class="pic-1" src="../../images/Casual Watches/4/Casual 4 Hugo Hugo ONYX HB1513367.jpg" alt="Hugo Boss ONYX HB1513367 Watch Face" title="Hugo Boss ONYX HB1513367"> <!--Image 4-->
-                      	<img class="pic-2" src="../../images/Casual Watches/4/Casual 4 Hugo Hugo ONYX HB1513367 (2).jpg" alt="Hugo Boss ONYX HB1513367 Watch Strap " title="Hugo Boss ONYX HB1513367 Watch Strap">
+<!--Casual Product 2-->
+		<div class="col-md-3 col-sm-6">
+			<div class="productoverview">
+				<div class="producthoverimage">
+					<a href="../Individual Product Pages/Casual Hugo ONYX HB1513367.php">
+						<img class="pic-1" src="../../images/Casual Watches/4/Casual 4 Hugo Hugo ONYX HB1513367.jpg" alt="Hugo Boss ONYX HB1513367 Watch Face" title="Hugo Boss ONYX HB1513367"> <!--Image 4-->
+						<img class="pic-2" src="../../images/Casual Watches/4/Casual 4 Hugo Hugo ONYX HB1513367 (2).jpg" alt="Hugo Boss ONYX HB1513367 Watch Strap " title="Hugo Boss ONYX HB1513367 Watch Strap">
 						<!--Image 4-->
-                    </a>
-                    <a class="add-to-cart" href="../Shopping Cart/Shopping Cart.php">Add to cart</a>
-                </div>
-                <div class="product-content">
-                    <h3 class="title"><a href="../Individual Product Pages/Casual Hugo ONYX HB1513367.php">Hugo ONYX Watch HG1513367</a></h3>
-                    <span class="price">S$122.57</span>
-                </div>
-            </div>
-        </div>
+					</a>
+					<a class="add-to-cart" href="../Shopping Cart/Shopping Cart.php">Add to cart</a>
+				</div>
+				<div class="product-content">
+					<h3 class="title"><a href="../Individual Product Pages/Casual Hugo ONYX HB1513367.php">Hugo ONYX Watch HG1513367</a></h3>
+					<span class="price">S$122.57</span>
+				</div>
+			</div>
+		</div>
+
+<!--Casual Product 2-->
+        
 <!--End Product List-->
 
     </div>

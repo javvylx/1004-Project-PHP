@@ -57,25 +57,9 @@
                 </div>
             </div>
         </div>
+        
 
 <!--Casual Product 2-->
-        <div class="col-md-3 col-sm-6">
-            <div class="productoverview">
-              <div class="producthoverimage">
-                  <a href="../Individual Product Pages/Sports Casio SGW-100-1VEF3 .php">
-                      <img class="pic-1" src="../../images/Sport Watches/2/Sports 2 Casio SGW-100-1VEF.jpg" alt="Casio SGW-100-1VEF Watch Face" title="Casio SGW-100-1VEF Watch Face"> <!--Image 2-->
-                      <img class="pic-2" src="../../images/Sport Watches/2/Sports 2 Casio SGW-100-1VEF3 (2).jpg" alt="Casio SGW-100-1VEF Watch Strap" title="Casio SGW-100-1VEF Watch Strap"> <!--Image 2-->
-                  </a>
-                  <a class="add-to-cart" href="../Shopping Cart/Shopping Cart.php">Add to cart</a>
-                </div>
-                <div class="product-content">
-                    <h3 class="title"><a href="../Individual Product Pages/Sports Casio SGW-100-1VEF3 .php">Casio SGW-100-1VEF3</a></h3>
-                    <span class="price">S$90.67</span>
-                </div>
-            </div>
-        </div>
-
-<!--Casual Product 3-->
         <div class="col-md-3 col-sm-6">
             <div class="productoverview">
                 <div class="producthoverimage">
@@ -88,24 +72,6 @@
                 <div class="product-content">
                     <h3 class="title"><a href="../Individual Product Pages/Sports Casio SWV-58U-1AVEF.php">Casio SWV-58U-1AVEF</a></h3>
                     <span class="price">$68.88</span>
-                </div>
-            </div>
-        </div>
-
-<!--Casual Product 4-->
-        <div class="col-md-3 col-sm-6">
-            <div class="productoverview">
-                <div class="producthoverimage">
-                    <a href="../Individual Product Pages/Sports Casio GBD-800UC-3.php">
-                       <img class="pic-1" src="../../images/Sport Watches/4/Sports 4 Casio GBD-800UC-3 (Grey) 1.jpg" alt="Casio GBD-800UC-3 (Grey)" title="Casio GBD-800UC-3 (Grey)"> <!--Image 3-->
-                       <img class="pic-2" src="../../images/Sport Watches/4/Sports 4 Casio GBD-800UC-3 (Olive Green) 2.jpg" alt="Casio GBD-800UC-3 (Olive Green)" title="Casio GBD-800UC-3 (Olive Green)">
-						<!--Image 3-->
-                    </a>
-                    <a class="add-to-cart" href="../Individual Product Pages/Sports Casio GBD-800UC-3.php">Add to cart</a>
-                </div>
-                <div class="product-content">
-                    <h3 class="title"><a href="../Individual Product Pages/Sports Casio GBD-800UC-3.php">Casio GBD-800UC-3</a></h3>
-                    <span class="price">$103.00</span>
                 </div>
             </div>
         </div>
