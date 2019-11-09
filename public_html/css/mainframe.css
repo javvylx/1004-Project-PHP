@@ -1,12 +1,12 @@
 /* CSS files compiled by: Lim Zheng Hao, Javier | Lim Keat Hui, Justin | Kyle Wong Kaige | Amitpaul Singh Sandhu
 
-Skeleton: Line 4 to Line 115             Done by: Lim Zheng Hao, Javier
-Landing Page: Line 119 to 234            Done by: Lim Zheng Hao, Javier
-Individual Products: Line 237 to 328      Done by: Kyle Wong Kaige
-Membership Portal: Line 330 to 345        Done by: Amitpaul Singh Sandhu
-Product Overview: Line 347 to 435         Done by: Lim Zheng Hao, Javier
-Shopping Cart: Line 437 to 444            Done by: Lim Keat Hui, Justin
-Contact Us: Line 447 to 501               Done by: Lim Keat Hui, Justin
+Skeleton: Line 13 to Line 124             Done by: Lim Zheng Hao, Javier
+Landing Page: Line 127 to 242            Done by: Lim Zheng Hao, Javier
+Individual Products: Line 244 to 335      Done by: Kyle Wong Kaige
+Membership Portal: Line 337 to 383        Done by: Amitpaul Singh Sandhu
+Product Overview: Line 385 to 473         Done by: Lim Zheng Hao, Javier
+Shopping Cart: Line 475 to 482            Done by: Lim Keat Hui, Justin
+Contact Us: Line 485 to 539               Done by: Lim Keat Hui, Justin
 
 */
 
@@ -349,6 +349,7 @@ html, body{
 #page1, #page2 {
     max-width: 100%;
 }
+/*Making the background to be translusent and align to center for the pop up/
 .bg-modal{
     width: 100%;
     height: 100%;
@@ -360,7 +361,7 @@ html, body{
     align-items: center;
     display: none;
 }
-
+/*Making the content of the pop up align to center*/
 .modal-content{
     width: 500px;
     height: 500px;
@@ -370,7 +371,7 @@ html, body{
     padding: 20px;
     position: relative;
 }
-
+/*Making the cross for the pop up*/
 .close{
     position: absolute;
     top: 0;
