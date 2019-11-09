@@ -1,4 +1,4 @@
-<?php if (session_start() == 1): ?>
+<?php error_reporting(0); session_start(); if ($_SESSION["loginflag"]==1):  ?>
 
 	<div class="container-fluid">
 		<nav class="navbar navbar-expand-lg navbar-light navbar fixed-top bg-light">
@@ -30,8 +30,6 @@
 				</div>
 			  </div>
 		</nav>
-
-
 <?php else: ?>
 <div class="container-fluid">
 	<nav class="navbar navbar-expand-lg navbar-light navbar fixed-top bg-light">
@@ -70,4 +68,4 @@
 		  </div>
 	</nav>
 <!--End of Navigation Bar-->
-<?php endif; ?>
+<?php endif;  ?>

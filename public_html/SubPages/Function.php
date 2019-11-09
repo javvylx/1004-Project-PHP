@@ -2,6 +2,7 @@
 //Global variables
 $errorMsg = "";
 $success = true;
+$loginflag=0;
 
 # Check_empty Function
 function check_empty($data)
@@ -45,15 +46,7 @@ function loginToDB(){
         // Execute query
         $result = $conn->query($sql);
         if($result->num_rows>0){
-            // Note that email field is unique, so should only have
-            // one row in the result set.
-            $row = $result->fetch_assoc();
-//            $fname = $row["fname"];
-//            $lname = $row["lname"];
-
-//            echo "<h4>Login Successful!</h4>";
-//            echo "Welcome back, " . $fname . " " . $lname . ".<br><br>";
-//            echo "<a href='index.php'><button type='button' class='btn btn-default'>Return to Home</button></a>";
+            $succcess = true;
         }
         else{
             $errorMsg = "Email not found or password doesn't match...";
@@ -98,7 +91,7 @@ function saveMemberToDB(){
 }
 function getCartData($id){
     $user_id = $id;
-    
+
     // Create Conn
     $conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
     // Check Conn
@@ -127,7 +120,7 @@ function getCartData($id){
             echo "<p>" . $errorMsg . "</p>";
             echo "<a href='login.php'><button type='button' class='btn btn-default'>Return to Login</button></a>";
         }
-        
+
         $result->free_result();
     }
     $conn->close();
@@ -135,7 +128,7 @@ function getCartData($id){
 
 function getWatchdata($id){
     $p_id = $id;
-    
+
     $conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
     // Check Conn
     if($conn->connect_error){
@@ -148,6 +141,4 @@ function getWatchdata($id){
         return $result;
     }
 }
-
-$loginflag =1;
  ?>

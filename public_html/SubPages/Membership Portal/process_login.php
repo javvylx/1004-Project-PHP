@@ -35,8 +35,8 @@ if (check_empty($password)){
 loginToDB();
 
 if ($success){ // if everything is okay and log in,
-  session_start();
-
+session_start();
+$_SESSION["loginflag"] =1;
 }
 
 ?>
@@ -69,7 +69,6 @@ if ($success){ // if everything is okay and log in,
         <!-- Codes to be implemented [Content] -->
         <div class="container py-5">
           <?php if ($success):  ?>
-            <?php echo $loginflag; ?>
             <h2>Login successful!</h2><br>
             <h3> Welcome back! </h3><br>
             <a href='../../index.php'><button type='button' class='btn btn-outline-secondary'>Return to Home</button></a>
