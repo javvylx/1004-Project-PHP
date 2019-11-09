@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Webpage by Kyle Wong Kaige -->
+<?php
+include '../Function.php';
 
+define("DBHOST", "161.117.122.252");
+define("DBNAME", "p5_7");
+define("DBUSER", "p5_7");
+define("DBPASS", "Q2Zp6mlCeq");
+
+$watchData = getWatchdata(3);
+$row = $watchData->fetch_assoc();
+?>
 <head>
   <meta name="Description" content="Watch.Me Sports Casio DW 5900-1ER">
   <meta charset="utf-8">
@@ -114,12 +124,16 @@
             -->
             <div class="detailblock">
                 <br>
-                <h5>Mens Casio Alarm Chronograph Watch DW-5900-1ER</h5>
-                <h6>Casio</h6><br>
-                <h5>S$120.75</h5><br><hr>
-                <h6>40 in stock</h6><br><br>
-
-                <button type="button" class="btn btn-primary addCartbtn">Add to Cart</button>
+                <h5><?php echo $row["product_name"] ?></h5>
+                <h6><?php echo $row["brand"] ?></h6><br>
+                <h5>$<?php echo $row["product_price"] ?></h5><br><hr>
+                <h6><?php echo $row["quantity"] ?> in stock</h6><br><br>
+                <form action="../Shopping Cart/process_addtocart.php" method="post">
+                    <?php  
+                    echo "<input type='hidden' name='p_id' value=" . $row["product_id"] . " />"
+                    ?>
+                    <button type="submit" class="btn btn-primary addCartbtn">Add to Cart</button>
+                </form>
             </div>
         </div>
     </div>
@@ -139,31 +153,28 @@
                     -->
                     <div class="col-6">
                         <p>
-                            Casio DW-5900-1ER is a practical and attractive Gents watch from G-Shock collection. Case is made out of Plastic/Resin, which stands for a high quality of the item and the Black dial gives the watch that unique look. The features of the watch include (among others) a chronograph and date function as well as an alarm. In regards to the water resistance, the watch has got a resistancy up to 200 metres. This means it can be used for professional marine activity, skin diving and high impact water sports, but not deep sea or mixed gas diving. The watch is shipped with an original box and a guarantee from the manufacturer.
+                            <?php echo $row["product_desc"] ?>
                         </p>
                     </div>
                     <div class="col-6">
                         <ul>
                             <li>
-                                <strong>Brand:</strong> Casio
+                                <strong>Brand: </strong> <?php echo $row["brand"] ?>
                             </li>
                             <li>
-                                <strong>Model Collection:</strong> G-Shock
+                                <strong>Model Collection: </strong> <?php echo $row["model_coll"] ?>
                             </li>
                             <li>
-                                <strong>Model Name:</strong> G-Shock Matte Black
+                                <strong>Model Name: </strong> <?php echo $row["model_name"] ?>
                             </li>
                             <li>
-                                <strong>Movement Source:</strong> Japanese
+                                <strong>Guarantee: </strong> <?php echo $row["guarantee"] ?> years
                             </li>
                             <li>
-                                <strong>Guarantee:</strong> 2 years
+                                <strong>Packaging: </strong> <?php echo $row["packaging"] ?> Packaging
                             </li>
                             <li>
-                                <strong>Packaging:</strong> Casio Packaging
-                            </li>
-                            <li>
-                                <strong>MPN:</strong> DW-5900-1ER
+                                <strong>MPN: </strong> <?php echo $row["mpn"] ?>
                             </li>
                         </ul>
                     </div>
@@ -179,34 +190,25 @@
             <div id="materials" class="panel-collapse collapse insideInfo">
                 <ul>
                     <li>
-                        <strong>Analogue/Digital:</strong> Digital
+                        <strong>Analogue/Digital: </strong> <?php echo $row["anadigi"] ?>
                     </li>
                     <li>
-                        <strong>Bezel Type:</strong> Fixed
+                        <strong>Primary Material: </strong> <?php echo $row["primary_mat"] ?>
                     </li>
                     <li>
-                        <strong>Primary Material:</strong> Plastic/Resin
+                        <strong>Case Shape: </strong> <?php echo $row["case_shape"] ?>
                     </li>
                     <li>
-                        <strong>Case Shape:</strong> Circle
+                        <strong>Dial Color: </strong> <?php echo $row["dial_color"] ?>
                     </li>
                     <li>
-                        <strong>Clasp Type:</strong> Strap Buckle
+                        <strong>Strap Color: </strong> <?php echo $row["strap_color"] ?>
                     </li>
                     <li>
-                        <strong>Dial Color:</strong> Black
+                        <strong>Strap Type: </strong> <?php echo $row["strap_type"] ?>
                     </li>
                     <li>
-                        <strong>Glass:</strong> Mineral
-                    </li>
-                    <li>
-                        <strong>Strap Color:</strong> Black
-                    </li>
-                    <li>
-                        <strong>Strap Type:</strong> Plastic/Resin
-                    </li>
-                    <li>
-                        <strong>Water Resistance:</strong> 200 metres
+                        <strong>Water Resistance: </strong> <?php echo $row["water_res_m"] ?> metres
                     </li>
                 </ul>
             </div>

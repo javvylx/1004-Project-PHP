@@ -50,7 +50,12 @@
                       <img class="pic-1" src="../../images/Casual Watches/2/Casual 2 Hugo Jump Watch 1530028.jpg" alt="Hugo Jump Watch 1530028 Watch Face" title="Hugo Jump Watch 1530028 Watch Face"> <!--Image 2-->
                       <img class="pic-2" src="../../images/Casual Watches/2/Casual 2 Hugo Jump Watch 1530028 (2).jpg" alt="Hugo Jump Watch 1530028 Watch Strap" title="Hugo Jump Watch 1530028 Watch Strap"><!--Image 2-->
                   </a>
-                  <a class="add-to-cart" href="../Shopping Cart/Shopping Cart.php">Add to cart</a>
+                    <form action="../Shopping Cart/process_addtocart.php" method="post">
+                        <?php  
+                        echo "<input type='hidden' name='p_id' value=1 />"
+                        ?>
+                        <button type="submit" class="add-to-cart">Add to Cart</button>
+                    </form>
                 </div>
                 <div class="product-content">
                     <h3 class="title"><a href="../Individual Product Pages/Casual Hugo Jump Watch.php">Hugo Jump Watch HG1530028</a></h3>
@@ -68,7 +73,12 @@
 						<img class="pic-2" src="../../images/Casual Watches/4/Casual 4 Hugo Hugo ONYX HB1513367 (2).jpg" alt="Hugo Boss ONYX HB1513367 Watch Strap " title="Hugo Boss ONYX HB1513367 Watch Strap">
 						<!--Image 4-->
 					</a>
-					<a class="add-to-cart" href="../Shopping Cart/Shopping Cart.php">Add to cart</a>
+                    <form action="../Shopping Cart/process_addtocart.php" method="post">
+                        <?php  
+                        echo "<input type='hidden' name='p_id' value=2 />"
+                        ?>
+                        <button type="submit" class="add-to-cart">Add to Cart</button>
+                    </form>
 				</div>
 				<div class="product-content">
 					<h3 class="title"><a href="../Individual Product Pages/Casual Hugo ONYX HB1513367.php">Hugo ONYX Watch HG1513367</a></h3>

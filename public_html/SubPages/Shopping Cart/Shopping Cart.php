@@ -1,4 +1,19 @@
 <!DOCTYPE html>
+<?php
+include '../Function.php';
+
+define("DBHOST", "161.117.122.252");
+define("DBNAME", "p5_7");
+define("DBUSER", "p5_7");
+define("DBPASS", "Q2Zp6mlCeq");
+
+$data = getCartData(1);
+
+$total = 0.00;
+$tax = 0.00;
+$shipping = 10.00;
+
+?>
 <html lang="en">
 <!-- Webpage by Lim Keat Hui, Justin -->
 
@@ -55,9 +70,6 @@
                 <div class="py-2 text-uppercase">Price</div>
               </th>
               <th scope="col" class="border-0 bg-light">
-                <div class="py-2 text-uppercase">Quantity</div>
-              </th>
-              <th scope="col" class="border-0 bg-light">
                 <div class="py-2 text-uppercase">Remove</div>
               </th>
             </tr>
@@ -68,81 +80,34 @@
           <tbody>
 
             <!-- Start of the table row 1 -->
-            <tr>
-              <td scope="row"  class=" border-0">
-                <div class="p-2">
-<!--                  <img>-->
-                  <!--Insert Image1-->
-                  <div class="ml-3 d-inline-block align-middle">
-                    <h5 class="mb-0">[Name of Product]</h5><span class="text-muted font-weight-normal font-italic d-block">Category: [Category Name]</span>
-                  </div>
-                </div>
-              </td>
-              <td class="border-0 align-middle"><strong>$79.00</strong></td>
-              <td class="border-0 align-middle">
-                <select>
-                  <option value="1" selected>1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="4">5</option>
-                </select>
-              </td>
-              <td class="align-middle border-0"><button type="button" class="btn btn-danger" name="Remove">Remove</button></td>
-            </tr>
+            <?php
+                if($data->num_rows>0){
+                    while($row = mysqli_fetch_assoc($data)){
+                        $total += $row["product_price"];
+                        
+                        echo "<tr>";
+                        echo    "<td scope='row'>";
+                        echo        "<div class='p-2'>";
+                        echo            "<div class='ml-3 d-inline-block align-middle'>";
+                        echo            "<h5 class='mb-0'>" . $row["product_name"] . "</h5><span class='text-muted font-weight-normal font-italic d-block'>Category: ". $row["watch_type"] ."</span>";
+                        echo            "</div>";
+                        echo        "</div>";
+                        echo    "</td>";
+                        echo  "<td class='align-middle'><strong>$" . $row["product_price"] . "</strong></td>";
+                        echo    "<form action='process_remove.php' method='post'>";
+                        echo        "<td class='align-middle'>"
+                                        . "<input type='hidden' name='p_id' value=" . $row["cart_item_id"] . " />" . "<button type='submit' class='btn btn-danger' name='Remove'>Remove</button>";
+                        echo        "</td>";
+                        echo    "</form>";
+                        echo "</tr>";
+                        
+                    }
+                }
+                else{
+                  
+                }
+            ?>
             <!-- End of table row 1 -->
-
-            <!-- Start of table row 2 -->
-            <tr>
-              <td scope="row">
-                <div class="p-2">
-<!--                  <img>-->
-                  <!--Insert Image2-->
-                  <div class="ml-3 d-inline-block align-middle">
-                    <h5 class="mb-0">[Name of Product]</h5><span class="text-muted font-weight-normal font-italic d-block">Category: [Category Name]</span>
-                  </div>
-                </div>
-              </td>
-              <td class="align-middle"><strong>$79.00</strong></td>
-              <td class="align-middle">
-                <select>
-                  <option value="1" selected>1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-              </td>
-              <td class="align-middle"><button type="button" class="btn btn-danger" name="Remove">Remove</button>
-              </td>
-            </tr>
-            <!-- End of table row 2 -->
-
-            <!-- Start of table row 3 -->
-            <tr>
-              <td scope="row">
-                <div class="p-2">
-<!--                  <img>-->
-                  <!--Insert Image3-->
-                  <div class="ml-3 d-inline-block align-middle">
-                    <h5 class="mb-0">[Name of Product]</h5><span class="text-muted font-weight-normal font-italic d-block">Category: [Category Name]</span>
-                  </div>
-                </div>
-              </td>
-              <td class="align-middle"><strong>$79.00</strong></td>
-              <td class="align-middle">
-                <select>
-                  <option value="1" selected>1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-              </td>
-              <td class="align-middle"><button type="button" class="btn btn-danger" name="Remove">Remove</button>
-              </td>
-            </tr>
-            <!-- End of table row 3 -->
 
           </tbody>
           <!-- End of the table body -->
@@ -193,11 +158,11 @@
       <div class="p-4">
         <p class="font-italic mb-4">Shipping and additional costs are calculated based on values you have entered.</p>
         <ul class="list-unstyled mb-4">
-          <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>$390.00</strong></li>
+          <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>$<?php echo $total ?></strong></li>
           <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and handling</strong><strong>$10.00</strong></li>
           <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>$0.00</strong></li>
           <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
-            <h5 class="font-weight-bold">$400.00</h5>
+            <h5 class="font-weight-bold">$<?php echo $cost = $total+$shipping+$tax ?></h5>
           </li>
         </ul>
         <form action="process_checkout.php" method="post">

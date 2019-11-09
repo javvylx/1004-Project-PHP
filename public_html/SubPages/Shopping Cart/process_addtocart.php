@@ -1,5 +1,4 @@
 <?php
-
 include '../Function.php';
 
 define("DBHOST", "161.117.122.252");
@@ -17,12 +16,12 @@ if($conn->connect_error){
     $success = false;
 }
 else{
-    $sql = "DELETE FROM p5_7.wm_shoppingcart WHERE user_id=1 AND cart_item_id=" . $p_id . ";";
+    $sql = "INSERT INTO wm_shoppingcart(user_id, product_id)"
+            . "VALUES(1,". $p_id .")";
     
     if($conn->query($sql) === True){
         echo "<meta http-equiv='refresh' content='0;URL=Shopping Cart.php' />";
     }
 }
-
-
 ?>
+

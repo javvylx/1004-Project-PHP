@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Webpage by Kyle Wong Kaige -->
+<?php
+include '../Function.php';
 
+define("DBHOST", "161.117.122.252");
+define("DBNAME", "p5_7");
+define("DBUSER", "p5_7");
+define("DBPASS", "Q2Zp6mlCeq");
+
+$watchData = getWatchdata(2);
+$row = $watchData->fetch_assoc();
+?>
 <head>
   <meta name="Description" content="Watch.Me Casual Hugo Boss ONYX HB1513367">
   <meta charset="utf-8">
@@ -115,12 +125,16 @@
             -->
             <div class="detailblock">
                 <br>
-                <h5>HUGO BOSS ONYX Watch HG1513367 </h5>
-                <h6>Pulsar</h6><br>
-                <h5>S$122.57</h5><br><hr>
-                <h6>20 in stock</h6><br><br>
-
-                <button type="button" class="btn btn-primary addCartbtn">Add to Cart</button>
+                <h5><?php echo $row["product_name"] ?></h5>
+                <h6><?php echo $row["brand"] ?></h6><br>
+                <h5>$<?php echo $row["product_price"] ?></h5><br><hr>
+                <h6><?php echo $row["quantity"] ?> in stock</h6><br><br>
+                <form action="../Shopping Cart/process_addtocart.php" method="post">
+                    <?php  
+                    echo "<input type='hidden' name='p_id' value=" . $row["product_id"] . " />"
+                    ?>
+                    <button type="submit" class="btn btn-primary addCartbtn">Add to Cart</button>
+                </form>
             </div>
         </div>
     </div>
@@ -140,28 +154,28 @@
                     -->
                     <div class="col-6">
                         <p>
-                            Hugo Boss 1513367 Mens Onyx Chronograph Watch has a black plating case with stainless steel and is fitted with an analogue chronograph quartz movement. It fastens a black leather strap and has a black dial. The watch has a date function.
+                            <?php echo $row["product_desc"] ?>
                         </p>
                     </div>
                     <div class="col-6">
                         <ul>
                             <li>
-                                <strong>Brand:</strong> HUGO BOSS
+                                <strong>Brand: </strong> <?php echo $row["brand"] ?>
                             </li>
                             <li>
-                                <strong>Model Name:</strong> Onyx Chronograph
+                                <strong>Model Collection: </strong> <?php echo $row["model_coll"] ?>
                             </li>
                             <li>
-                                <strong>Movement Source:</strong> Quartz
+                                <strong>Model Name: </strong> <?php echo $row["model_name"] ?>
                             </li>
                             <li>
-                                <strong>Guarantee:</strong> 2 years
+                                <strong>Guarantee: </strong> <?php echo $row["guarantee"] ?> years
                             </li>
                             <li>
-                                <strong>Packaging:</strong> Hugo Packaging
+                                <strong>Packaging: </strong> <?php echo $row["packaging"] ?> Packaging
                             </li>
                             <li>
-                                <strong>MPN:</strong> HB 1513367
+                                <strong>MPN: </strong> <?php echo $row["mpn"] ?>
                             </li>
                         </ul>
                     </div>
@@ -177,28 +191,25 @@
             <div id="materials" class="panel-collapse collapse insideInfo">
                 <ul>
                     <li>
-                        <strong>Analogue/Digital:</strong>Analogue
+                        <strong>Analogue/Digital: </strong> <?php echo $row["anadigi"] ?>
                     </li>
                     <li>
-                        <strong>Primary Material:</strong>Stainless Steel
+                        <strong>Primary Material: </strong> <?php echo $row["primary_mat"] ?>
                     </li>
                     <li>
-                        <strong>Case Shape:</strong> Circle
+                        <strong>Case Shape: </strong> <?php echo $row["case_shape"] ?>
                     </li>
                     <li>
-                        <strong>Clasp Type:</strong> Push-button Deployment
+                        <strong>Dial Color: </strong> <?php echo $row["dial_color"] ?>
                     </li>
                     <li>
-                        <strong>Dial Color:</strong> Black
+                        <strong>Strap Color: </strong> <?php echo $row["strap_color"] ?>
                     </li>
                     <li>
-                        <strong>Strap Color:</strong> Black
+                        <strong>Strap Type: </strong> <?php echo $row["strap_type"] ?>
                     </li>
                     <li>
-                        <strong>Strap Type:</strong> Leather
-                    </li>
-                    <li>
-                        <strong>Water Resistance:</strong> 50 metres
+                        <strong>Water Resistance: </strong> <?php echo $row["water_res_m"] ?> metres
                     </li>
                 </ul>
             </div>

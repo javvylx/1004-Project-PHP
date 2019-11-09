@@ -49,7 +49,12 @@
                         <img class="pic-1" src="../../images/Sport Watches/1/Sports 1 DW-5900-1ER.jpg" alt="Casio DW-5900-1ER Watch Face" title="Casio DW-5900-1ER Watch Face"> <!--Image 1-->
                         <img class="pic-2" src="../../images/Sport Watches/1/Sports 1 DW-5900-1ER (2).jpg" alt="Casio DW-5900-1ER Watch Strap" title="Casio DW-5900-1ER Watch Strap"> <!--Image 1-->
                     </a>
-                    <a class="add-to-cart" href="../Shopping Cart/Shopping Cart.php">Add to cart</a>
+                    <form action="../Shopping Cart/process_addtocart.php" method="post">
+                        <?php  
+                        echo "<input type='hidden' name='p_id' value=3 />"
+                        ?>
+                        <button type="submit" class="add-to-cart">Add to Cart</button>
+                    </form>
                 </div>
                 <div class="product-content">
                     <h3 class="title"><a href="../Individual Product Pages/Sports Casio DW 5900-1ER.php">Casio DW-5900-1ER</a></h3>
@@ -67,7 +72,12 @@
                         <img class="pic-1" src="../../images/Sport Watches/3/Sports 3 Casio SWV-58U-1AVEF (2).jpg" alt="Casio SWV-58U-1AVEF Watch Face" title="Casio SGW-100-1VEF Watch Face"> <!--Image 3-->
                         <img class="pic-2" src="../../images/Sport Watches/3/Sports 3 Casio SWV-58U-1AVEF.jpg" alt="Casio SWV-58U-1AVEF Watch Strap" title="Casio SGW-100-1VEF Watch Strap"> <!--Image 3-->
                     </a>
-                    <a class="add-to-cart" href="../Shopping Cart/Shopping Cart.php">Add to cart</a>
+                    <form action="../Shopping Cart/process_addtocart.php" method="post">
+                        <?php  
+                        echo "<input type='hidden' name='p_id' value=4 />"
+                        ?>
+                        <button type="submit" class="add-to-cart">Add to Cart</button>
+                    </form>
                 </div>
                 <div class="product-content">
                     <h3 class="title"><a href="../Individual Product Pages/Sports Casio SWV-58U-1AVEF.php">Casio SWV-58U-1AVEF</a></h3>
