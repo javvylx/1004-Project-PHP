@@ -108,3 +108,13 @@ function show_password() {
 document.getElementById("submit").addEventListener("click", validateForm());
 document.getElementById("check1").addEventListener("click", show_password());
 document.getElementById("check2").addEventListener("click", show_password());
+
+function show_popup(){
+    document.querySelector(".bg-modal").style.display ="flex";
+}
+document.getElementById("condition").addEventListener("click",show_popup());
+
+function hide_popup(){
+    document.querySelector(".bg-modal").style.display ="none";
+}
+document.querySelector(".close").addEventListener("click",hide_popup());
