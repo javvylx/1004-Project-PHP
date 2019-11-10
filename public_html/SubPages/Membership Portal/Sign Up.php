@@ -50,53 +50,45 @@
                     <h2>Create your account</h2>
                 </div>
             </div>
-			<?php
-			
-			if(isset($_GET["error"])){
-				if($_GET['error'] == "emptyfields"){
-					echo "<p class='errormsg'> Error: Please fill in all the fields! </p>";
-				}
-				else if ($_GET["error"] == "invalidfirstname") {
-					  echo '<p class="errormsg"> Error: Invalid First Name! Only letters and white space allowed!</p>';
-				}
-				else if ($_GET["error"] == "invalidlastname") {
-				  echo '<p class="errormsg"> Error: Invalid Last Name! Only letters and white space allowed!</p>';
-				}
-				else if ($_GET["error"] == "invalidemail") {
-				  echo '<p class="errormsg"> Error: Invalid Email Address Format!</p>';
-				}
-				else if ($_GET["error"] == "passwordcheck") {
-				  echo '<p class="errormsg"> Error: Your password do not match!</p>';
-				}
-				else if ($_GET["error"] == "emailtaken") {
-				  echo '<p class="errormsg"> Error: Email address has already been taken! </p>';
-				}
-			}
-			else if ($_GET["signup"] == "success") {
-				  echo "<p class='errormsg'>Thank you for signing up for Watch Me! Click here to return to <a href='Login Page.php'><u>login page</u></a></p>";
-				  
-			}	
-			?>
+            <?php
+            if (isset($_GET["error"])) {
+                if ($_GET['error'] == "emptyfields") {
+                    echo "<p class='errormsg'> Error: Please fill in all the fields! </p>";
+                } else if ($_GET["error"] == "invalidfirstname") {
+                    echo '<p class="errormsg"> Error: Invalid First Name! Only letters and white space allowed!</p>';
+                } else if ($_GET["error"] == "invalidlastname") {
+                    echo '<p class="errormsg"> Error: Invalid Last Name! Only letters and white space allowed!</p>';
+                } else if ($_GET["error"] == "invalidemail") {
+                    echo '<p class="errormsg"> Error: Invalid Email Address Format!</p>';
+                } else if ($_GET["error"] == "passwordcheck") {
+                    echo '<p class="errormsg"> Error: Your password do not match!</p>';
+                } else if ($_GET["error"] == "emailtaken") {
+                    echo '<p class="errormsg"> Error: Email address has already been taken! </p>';
+                }
+            } else if ($_GET["signup"] == "success") {
+                echo "<p class='errormsg'>Thank you for signing up for Watch Me! Click here to return to <a href='Login Page.php'><u>login page</u></a></p>";
+            }
+            ?>
             <section class="container">
                 <form action="process_registernew.php" method="POST">
-					<!--First name-->
+                    <!--First name-->
                     <div class ="form-group">
                         <label for ="firstname">First Name:</label>
                         <input type="text" class ="form-control" name="fname">
                     </div>
-					
+
                     <!--Last name-->
                     <div class ="form-group">
                         <label for ="lastname">Last Name:</label>
                         <input type="text" class ="form-control" name="lname">
                     </div>
-					
+
                     <!--Email-->
                     <div class ="form-group">
-     					<label for ="email">Email:</label>                  
-						<input type="text" class ="form-control" name="email">
+                        <label for ="email">Email:</label>                  
+                        <input type="text" class ="form-control" name="email">
                     </div>
-					
+
                     <!--Password-->
                     <div class ="form-group">
                         <label for ="pass">Password:</label>
@@ -110,35 +102,51 @@
 
                     <!--Agree to terms and conditions-->
                     <div class="checkbox">
-                        <input type="checkbox" required name="terms"
-                        <a href="#" data-toggle="modal" data-target="#mymodal"> <label for = 'checkbox' id="condition">Agree to terms and conditions</label></a>
+                        <input type="checkbox" required name="terms">            
+                        <a href="#" data-toggle="modal" data-target="#mymodal"><label for = 'checkbox' id="condition">Agree to terms and conditions</label></a>
                     </div>
 
                     <input type="submit" class ="btn btn-primary btn-lg" name="signup-submit"> 
-					&nbsp; &nbsp;&nbsp; &nbsp;
-					<input type="reset" value="Clear" class ="btn btn-danger btn-lg" name="Clear">
-					
+                    &nbsp; &nbsp;&nbsp; &nbsp;
+                    <input type="reset" value="Clear" class ="btn btn-danger btn-lg" name="Clear">
+
                     <!--Pop Up -->
-                    <div class="bg-modal">
-                        <div class="modal-content">
-                            <div class="close">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="modal fade" id="mymodal">
+                                    <div class="modal-dialog ">
+                                        <div class="modal-content">
+
+
+                                            <div class="modal-header">
+                                                <h1>Terms and Conditions</h1>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h6>
+
+                                                    Watch.me is an online service provided by Watch.Me Ptd Ltd.
+                                                    <br>
+                                                    You become a member of Watch.Me and be able to use all the services we provide.<br>
+                                                    This Agreement takes effect as soon as you indicate your acceptance of these terms.<br>
+                                                    By accepting the terms, you represent that you are at least the legal age of Singapore.<br>
+                                                    Our products that you purchase can only be use for your own personal use.<br>
+                                                    A violation of any of the Terms will result in an immediate termination of your Services
+
+                                                </h6>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <input class="btn btn-primary" data-dismiss="modal" value="Close">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <h2>Terms and Conditions</h2>
-                            <br>
-                            <br>
-                            <h4>
-
-                                Watch.me is an online service provided by Watch.Me Ptd Ltd.
-                                <br>
-                                You become a member of Watch.Me and be able to use all the services we provide.<br>
-                                This Agreement takes effect as soon as you indicate your acceptance of these terms.<br>
-                                By accepting the terms, you represent that you are at least the legal age of Singapore.<br>
-                                Our products that you purchase can only be use for your own personal use.<br>
-                                A violation of any of the Terms will result in an immediate termination of your Services
-
-                            </h4>
                         </div>
                     </div>
+
+
+
                 </form>
             </section>
         </div>
