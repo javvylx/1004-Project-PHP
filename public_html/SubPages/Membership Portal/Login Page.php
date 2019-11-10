@@ -73,7 +73,7 @@
 								}
 							}
 							else if ($_GET["login"] == "success") {
-				 			 	echo "<p>Congratz you have signed in!</p>";
+				 			 	echo '<p class="loginmsg">Congratulations, you have signed in!</p>';
 							}
 							?>
 								
