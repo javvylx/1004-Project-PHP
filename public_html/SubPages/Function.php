@@ -20,6 +20,21 @@ function check_empty($data)
   }
 }
 
+function dbconn()
+{
+	$servername = "161.117.122.252";
+	$dbusername = "p5_7";
+	$dbpassword = "Q2Zp6mlCeq";
+	$dbname = "p5_7";
+
+	$conn = mysqli_connect($servername, $dbusername, $dbpassword, $dbname);
+
+	if (!$conn){
+		die("Connection Failed: " .mysqli_connect_error());
+	}
+	echo "Connected successfully";
+
+}
 
 # Sanitize Function to prevent XSS attack
 function sanitize($data)
@@ -89,6 +104,8 @@ function saveMemberToDB(){
     }
     $conn->close();
 }
+
+
 function getCartData($id){
     $user_id = $id;
 

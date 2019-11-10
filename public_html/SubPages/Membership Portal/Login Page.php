@@ -58,18 +58,33 @@
 							<div class="col-lg-10 col-xl-7 mx-auto">
 								<h3 class="display-4">Watch.Me!</h3>
 								<p class="text-muted mb-4">Sign in into your account</p>
-								<form action="process_login.php" method="post">
+							<?php
+			
+							if(isset($_GET["error"])){
+								if($_GET['error'] == "emptyfields"){
+									echo '<p class="loginmsg"> Error: Please fill in all the fields! </p>';
+								}
+								if($_GET['error'] == "wrongpwd"){
+									echo '<p class="loginmsg"> Error: Password does not match! Please re-enter password! </p>';
+									
+								}
+								if($_GET['error'] == "wrongcred"){
+									echo '<p class="loginmsg"> Error: User Credientials not found! Please sign up! </p>';
+								}
+							}
+							else if ($_GET["login"] == "success") {
+				 			 	echo "<p>Congratz you have signed in!</p>";
+							}
+							?>
+								
+								<form action="process_loginnew.php" method="post">
 									<div class="form-group mb-3">
-										<input id="inputEmail" type="email" placeholder="Email address" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4" name="Email">
+										<input type="text" placeholder="Email address" class="form-control rounded-pill border-0 shadow-sm px-4" name="email">
 									</div>
 									<div class="form-group mb-3">
-										<input id="inputPassword" type="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary" name="Password">
+										<input type="password" placeholder="Password" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary" name="pwd">
 									</div>
-									<div class="custom-control custom-checkbox mb-3">
-										<input id="customCheck1" type="checkbox" checked class="custom-control-input">
-										<label for="customCheck1" class="custom-control-label">Remember password</label>
-									</div>
-									<a href="Profile.php"> <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Sign in</button></a>
+									<button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm" name="login-submit">Sign in</button></a>
 								</form>
 							</div>
 						</div>

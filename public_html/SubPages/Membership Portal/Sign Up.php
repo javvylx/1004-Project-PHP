@@ -31,7 +31,7 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="../../index.php">Home</a></li>
-                    <li class="breadcrumb-item"><a href="Login Page.html">Membership Portal</a></li>
+                    <li class="breadcrumb-item"><a href="Login Page.php">Membership Portal</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Sign Up</li>
                 </ol>
             </nav>
@@ -50,52 +50,78 @@
                     <h2>Create your account</h2>
                 </div>
             </div>
-
-            <div class=" container-fluid">
-                <h5 class ="text-secondary"> For Existing Members, please go to <a class="text-secondary" href='Login Page.php'>Login Page.</a></h4>
-            </div>
-
-
+			<?php
+			
+			if(isset($_GET["error"])){
+				if($_GET['error'] == "emptyfields"){
+					echo "<p class='errormsg'> Error: Please fill in all the fields! </p>";
+				}
+				else if ($_GET["error"] == "invalidfirstname") {
+					  echo '<p class="errormsg"> Error: Invalid First Name! Only letters and white space allowed!</p>';
+				}
+				else if ($_GET["error"] == "invalidlastname") {
+				  echo '<p class="errormsg"> Error: Invalid Last Name! Only letters and white space allowed!</p>';
+				}
+				else if ($_GET["error"] == "invalidemail") {
+				  echo '<p class="errormsg"> Error: Invalid Email Address Format!</p>';
+				}
+				else if ($_GET["error"] == "passwordcheck") {
+				  echo '<p class="errormsg"> Error: Your password do not match!</p>';
+				}
+				else if ($_GET["error"] == "emailtaken") {
+				  echo '<p class="errormsg"> Error: Email address has already been taken! </p>';
+				}
+			}
+			else if ($_GET["signup"] == "success") {
+				  echo "<p class='errormsg'>Thank you for signing up for Watch Me! Click here to return to <a href='Login Page.php'><u>login page</u></a></p>";
+				  
+			}	
+			?>
             <section class="container">
-                <form action="Process_Sign Up.php" method="POST">
+                <form action="process_registernew.php" method="POST">
+					<!--First name-->
                     <div class ="form-group">
                         <label for ="firstname">First Name:</label>
-                        <input type='text' class =' form-control'id='firstname'placeholder='Enter first name' name='firstname'  required pattern='[A-Za-z]{3,}'>
+                        <input type="text" class ="form-control" name="fname">
                     </div>
-                    <!--required is used for HTML Validation, a pattern is included to check user input if they are using alphabets be it small or large case-->
+					
+                    <!--Last name-->
                     <div class ="form-group">
-                        <!--Last name form box-->
                         <label for ="lastname">Last Name:</label>
-                        <input type='text' class =' form-control'id='lastname'placeholder='Enter last name' name='lastname' required pattern='[A-Za-z]{3,}'>
+                        <input type="text" class ="form-control" name="lname">
                     </div>
+					
                     <!--Email-->
                     <div class ="form-group">
-                        <label for ="email">Email:</label>
-                        <input type='email' class =' form-control'id='email'placeholder='Enter email' name='email'required>
+     					<label for ="email">Email:</label>                  
+						<input type="text" class ="form-control" name="email">
                     </div>
-                    <!--Password, pattern: 8 or more characters; would include at least one number and one upper and lowercase letter-->
+					
+                    <!--Password-->
                     <div class ="form-group">
-                        <label for ="password">Password:</label>
-                        <input type='password' class =' form-control' id='password' placeholder='Password' name='password'>
+                        <label for ="pass">Password:</label>
+                        <input type="password" class ="form-control" name="pwd">
                     </div>
-                    <!--Confirm password included a confirm password span message so that user can know that he type the same input-->
+                    <!--Confirm Password-->
                     <div class ="form-group">
-                        <label for ="confirm_password">Confirm Password: <span id='message'></span></label>
-                        <input type='password' class='form-control' id='confirm_password' placeholder='Confirm Password' name='confirm_password'>
+                        <label for ="confirmpass">Confirm Password:</label>
+                        <input type="password" class ="form-control" name="cpwd">
                     </div>
 
                     <!--Agree to terms and conditions-->
                     <div class="checkbox">
-                        <input type="checkbox" name="checkbox"<?php if (isset($_POST['submit']) && isset($_POST['checkbox'])) echo"checked" ?>>
-                        <a href="#"> <label for = 'checkbox' id="condition">Agree to terms and conditions</label></a>
+                        <input type="checkbox" required name="terms"
+                        <a href="#" data-toggle="modal" data-target="#mymodal"> <label for = 'checkbox' id="condition">Agree to terms and conditions</label></a>
                     </div>
 
-                    <input type="submit" class ="btn btn-primary btn-lg " value="Submit" name="submit"> &nbsp; &nbsp;&nbsp; &nbsp;<input type="reset" value="Clear" class ="btn btn-danger btn-lg" name="Clear">
+                    <input type="submit" class ="btn btn-primary btn-lg" name="signup-submit"> 
+					&nbsp; &nbsp;&nbsp; &nbsp;
+					<input type="reset" value="Clear" class ="btn btn-danger btn-lg" name="Clear">
+					
                     <!--Pop Up -->
                     <div class="bg-modal">
                         <div class="modal-content">
                             <div class="close">
-                                +
                             </div>
                             <h2>Terms and Conditions</h2>
                             <br>

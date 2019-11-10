@@ -341,6 +341,21 @@ html, body{
     text-align: center;
     align-content: center;
 }
+
+.errormsg{
+	 text-align: center;
+     align-content: center;
+	 font-size: 20px;
+	 font-weight: bold;
+	 color:red;
+}
+
+.loginmsg{
+	 font-size: 15px;
+	 font-weight: bold;
+	 color:red;
+	 text-decoration: none;
+}
 /* Making the entire page more aligned to the center*/
 .form{
     padding: 50px;
@@ -349,7 +364,7 @@ html, body{
 #page1, #page2 {
     max-width: 100%;
 }
-/*Making the background to be translusent and align to center for the pop up/
+/*Making the background to be translusent and align to center for the pop up*/
 .bg-modal{
     width: 100%;
     height: 100%;

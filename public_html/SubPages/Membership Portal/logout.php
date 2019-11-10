@@ -36,7 +36,7 @@
 
             <div class="row py-3">
             <div class="px-3">
-                <a href="index.php"><button type='button' class='btn btn-outline-secondary btn-lg btn-block'>Return Home</button> </a>
+                <a href="../../index.php"><button type='button' class='btn btn-outline-secondary btn-lg btn-block'>Return Home</button> </a>
             </div>
             <div class="px-3">
                 <a href="Login Page.php"><button type='button' class='btn btn-outline-secondary btn-lg btn-block'>Return to Login</button> </a>
