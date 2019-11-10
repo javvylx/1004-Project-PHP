@@ -110,7 +110,11 @@
 
                     <!--Agree to terms and conditions-->
                     <div class="checkbox">
+<<<<<<< HEAD
                         <input type="checkbox" required name="terms"
+=======
+                        <input type="checkbox" name="checkbox"<?php if (isset($_POST['submit']) && isset($_POST['checkbox'])) echo"checked" ?>>
+>>>>>>> fbf3f636882864031001d2fae7d0613fed4fefa7
                         <a href="#" data-toggle="modal" data-target="#mymodal"> <label for = 'checkbox' id="condition">Agree to terms and conditions</label></a>
                     </div>
 
@@ -119,26 +123,48 @@
 					<input type="reset" value="Clear" class ="btn btn-danger btn-lg" name="Clear">
 					
                     <!--Pop Up -->
+<<<<<<< HEAD
                     <div class="bg-modal">
                         <div class="modal-content">
                             <div class="close">
+=======
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="modal fade" id="mymodal">
+                                    <div class="modal-dialog ">
+                                        <div class="modal-content">
+
+
+                                            <div class="modal-header">
+                                                <h1>Terms and Conditions</h1>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h6>
+
+                                                    Watch.me is an online service provided by Watch.Me Ptd Ltd.
+                                                    <br>
+                                                    You become a member of Watch.Me and be able to use all the services we provide.<br>
+                                                    This Agreement takes effect as soon as you indicate your acceptance of these terms.<br>
+                                                    By accepting the terms, you represent that you are at least the legal age of Singapore.<br>
+                                                    Our products that you purchase can only be use for your own personal use.<br>
+                                                    A violation of any of the Terms will result in an immediate termination of your Services
+
+                                                </h6>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <input class="btn btn-primary" data-dismiss="modal" value="Close">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+>>>>>>> fbf3f636882864031001d2fae7d0613fed4fefa7
                             </div>
-                            <h2>Terms and Conditions</h2>
-                            <br>
-                            <br>
-                            <h4>
-
-                                Watch.me is an online service provided by Watch.Me Ptd Ltd.
-                                <br>
-                                You become a member of Watch.Me and be able to use all the services we provide.<br>
-                                This Agreement takes effect as soon as you indicate your acceptance of these terms.<br>
-                                By accepting the terms, you represent that you are at least the legal age of Singapore.<br>
-                                Our products that you purchase can only be use for your own personal use.<br>
-                                A violation of any of the Terms will result in an immediate termination of your Services
-
-                            </h4>
                         </div>
                     </div>
+
+
                 </form>
             </section>
         </div>
