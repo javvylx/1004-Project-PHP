@@ -11,17 +11,14 @@ $p_id = $_POST['p_id'];
 // Create Conn
 $conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
 // Check Conn
-if($conn->connect_error){
+if ($conn->connect_error) {
     $errorMsg = "Connection failed: " . $conn->connect_error;
     $success = false;
-}
-else{
+} else {
     $sql = "INSERT INTO wm_shoppingcart(user_id, product_id)"
             . "VALUES(1,". $p_id .")";
-    
-    if($conn->query($sql) === True){
+
+    if ($conn->query($sql) === true) {
         echo "<meta http-equiv='refresh' content='0;URL=Shopping Cart.php' />";
     }
 }
-?>
-

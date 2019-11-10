@@ -1,4 +1,8 @@
-<?php error_reporting(0); session_start(); if ($_SESSION["loginflag"]==1):  ?>
+<?php
+ error_reporting(0);
+ session_start();
+ if ($_SESSION["loginflag"]==1):
+?>
 
 		<div class="container-fluid-remove-paddings">
 			<nav class="navbar navbar-expand-lg navbar-light navbar bg-light">
@@ -62,10 +66,6 @@
 
 						<li class="nav-item">
 							<a href="../Membership Portal/Login Page.php" class="nav-link m-2 menu-item">Membership Portal</a>
-						</li>
-
-					  <li class="nav-item">
-							<a href="../Shopping Cart/Shopping Cart.php" class="nav-link m-2 menu-item">Shopping Cart</a>
 						</li>
 				  </ul>
 				</div>

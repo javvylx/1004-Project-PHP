@@ -54,19 +54,19 @@
             if (isset($_GET["error"])) {
                 if ($_GET['error'] == "emptyfields") {
                     echo "<p class='errormsg'> Error: Please fill in all the fields! </p>";
-                } else if ($_GET["error"] == "invalidfirstname") {
+                } elseif ($_GET["error"] == "invalidfirstname") {
                     echo '<p class="errormsg"> Error: Invalid First Name! Only letters and white space allowed!</p>';
-                } else if ($_GET["error"] == "invalidlastname") {
+                } elseif ($_GET["error"] == "invalidlastname") {
                     echo '<p class="errormsg"> Error: Invalid Last Name! Only letters and white space allowed!</p>';
-                } else if ($_GET["error"] == "invalidemail") {
+                } elseif ($_GET["error"] == "invalidemail") {
                     echo '<p class="errormsg"> Error: Invalid Email Address Format!</p>';
-                } else if ($_GET["error"] == "passwordcheck") {
+                } elseif ($_GET["error"] == "passwordcheck") {
                     echo '<p class="errormsg"> Error: Your password do not match!</p>';
-                } else if ($_GET["error"] == "emailtaken") {
+                } elseif ($_GET["error"] == "emailtaken") {
                     echo '<p class="errormsg"> Error: Email address has already been taken! </p>';
                 }
-            } else if ($_GET["signup"] == "success") {
-                echo "<p class='errormsg'>Thank you for signing up for Watch Me! Click here to return to <a href='Login Page.php'><u>login page</u></a></p>";
+            } elseif ($_GET["signup"] == "success") {
+                echo "<p class='errormsg'>Thank you for signing up for Watch Me! Click here to return to <a href='Login Page.php'><u>:Login Page</u></a></p>";
             }
             ?>
             <section class="container">
@@ -85,7 +85,7 @@
 
                     <!--Email-->
                     <div class ="form-group">
-                        <label for ="email">Email:</label>                  
+                        <label for ="email">Email:</label>
                         <input type="text" class ="form-control" name="email">
                     </div>
 
@@ -102,11 +102,11 @@
 
                     <!--Agree to terms and conditions-->
                     <div class="checkbox">
-                        <input type="checkbox" required name="terms">            
+                        <input type="checkbox" required name="terms">
                         <a href="#" data-toggle="modal" data-target="#mymodal"><label for = 'checkbox' id="condition">Agree to terms and conditions</label></a>
                     </div>
 
-                    <input type="submit" class ="btn btn-primary btn-lg" name="signup-submit"> 
+                    <input type="submit" class ="btn btn-primary btn-lg" name="signup-submit">
                     &nbsp; &nbsp;&nbsp; &nbsp;
                     <input type="reset" value="Clear" class ="btn btn-danger btn-lg" name="Clear">
 
