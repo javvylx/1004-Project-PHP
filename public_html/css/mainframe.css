@@ -350,11 +350,17 @@ html, body{
 	 color:red;
 }
 
-.loginmsg{
-	 font-size: 15px;
+.errorloginmsg{
+	 font-size: 18px;
 	 font-weight: bold;
 	 color:red;
-	 text-decoration: none;
+}
+
+.loginsuccessmsg{
+	 font-size: 18px;
+	 font-weight: bold;
+	 color:green;
+	 
 }
 /* Making the entire page more aligned to the center*/
 .form{

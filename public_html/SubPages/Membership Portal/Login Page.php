@@ -24,7 +24,16 @@
 	<?php
     include "../../header.php";
     ?>
-
+<!--Start of Breadcrumb -->
+  <div class="container-fluid-remove-paddings">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../../index.php">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Membership Portal</li>
+      </ol>
+    </nav>
+  </div>
+  <!--End of Breadcrumb --><strong></strong>
 	<!--Start of contents -->
 	<div class="container-fluid form">
 		<div class="row no-gutter">
@@ -44,7 +53,7 @@
 								<li>Review your previous purchases</li>
 							</ul>
 							<form>
-								<a href="Sign Up.php"> <input type="button" class="btn btn-primary btn-lg" value="Create Account" name="create_account" /></a>
+								<a href="Register.php"> <input type="button" class="btn btn-primary btn-lg" value="Create Account" name="create_account" /></a>
 							</form>
 						</div>
 					</div>
@@ -62,27 +71,27 @@
 			
 							if(isset($_GET["error"])){
 								if($_GET['error'] == "emptyfields"){
-									echo '<p class="loginmsg"> Error: Please fill in all the fields! </p>';
+									echo '<p class="errorloginmsg"> Error: Please fill in all the fields! </p>';
 								}
 								if($_GET['error'] == "wrongpwd"){
-									echo '<p class="loginmsg"> Error: Password does not match! Please re-enter password! </p>';
+									echo '<p class="errorloginmsg"> Error: Password does not match! Please re-enter password! </p>';
 									
 								}
 								if($_GET['error'] == "wrongcred"){
-									echo '<p class="loginmsg"> Error: User Credientials not found! Please sign up! </p>';
+									echo '<p class="errorloginmsg"> Error: User Credientials not found! Please sign up! </p>';
 								}
 							}
 							else if ($_GET["login"] == "success") {
-				 			 	echo '<p class="loginmsg">Congratulations, you have signed in!</p>';
+				 			 	echo '<p class="loginsuccessmsg">Congratulations, you have signed in! </p>';
 							}
 							?>
 								
-								<form action="process_loginnew.php" method="post">
+								<form action="process_login.php" method="post">
 									<div class="form-group mb-3">
 										<input type="text" placeholder="Email address" class="form-control rounded-pill border-0 shadow-sm px-4" name="email">
 									</div>
 									<div class="form-group mb-3">
-										<input type="password" placeholder="Password" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary" name="pwd">
+										<input type="password" placeholder="Password" class="form-control rounded-pill border-0 shadow-sm px-4" name="pwd">
 									</div>
 									<button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm" name="login-submit">Sign in</button></a>
 								</form>

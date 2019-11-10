@@ -70,7 +70,7 @@
             }
             ?>
             <section class="container">
-                <form action="process_registernew.php" method="POST">
+                <form action="process_register.php" method="POST">
                     <!--First name-->
                     <div class ="form-group">
                         <label for ="firstname">First Name:</label>

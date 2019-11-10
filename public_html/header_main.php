@@ -59,10 +59,6 @@
 					<li class="nav-item">
 						<a href="SubPages/Membership Portal/Login Page.php" class="nav-link m-2 menu-item">Membership Portal</a>
 					</li>
-
-				  <li class="nav-item">
-						<a href="SubPages/Shopping Cart/Shopping Cart.php" class="nav-link m-2 menu-item">Shopping Cart</a>
-					</li>
 			  </ul>
 			</div>
 		  </div>

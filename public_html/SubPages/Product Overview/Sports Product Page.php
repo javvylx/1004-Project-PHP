@@ -29,7 +29,7 @@
 <div class="container-fluid-remove-paddings">
 	<nav aria-label="breadcrumb">
 	  <ol class="breadcrumb">
-		<li class="breadcrumb-item"><a href="../../Watchme_Landing_Page.php">Home</a></li>
+		<li class="breadcrumb-item"><a href="../../index.php">Home</a></li>
 		<li class="breadcrumb-item active" aria-current="page">Sports Watches</li>
 	  </ol>
 	</nav>
