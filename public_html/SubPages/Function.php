@@ -47,21 +47,6 @@ function getCartData($id){
         // Execute query
         $result = $conn->query($sql);
         return $result;
-        if($result->num_rows>0){
-            while($row = mysqli_fetch_assoc($result)){
-                echo $row["product_id"] . " - " . $row["product_name"] . " - " . $row["product_price"] . " - " . $row["quantity"] . "<br>";
-            }
-        }
-        else{
-            $errorMsg = "No data found.";
-            $success = false;
-
-            echo "<h4>Oops!</h4>";
-            echo "<h2>The following input errors were detected:</h2>";
-            echo "<p>" . $errorMsg . "</p>";
-            echo "<a href='login.php'><button type='button' class='btn btn-default'>Return to Login</button></a>";
-        }
-
         $result->free_result();
     }
     $conn->close();
