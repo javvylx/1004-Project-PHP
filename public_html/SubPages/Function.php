@@ -1,4 +1,5 @@
 <?php
+session_start();
 //Global variables
 $errorMsg = "";
 $success = true;

@@ -7,7 +7,7 @@ define("DBNAME", "p5_7");
 define("DBUSER", "p5_7");
 define("DBPASS", "Q2Zp6mlCeq");
 
-$data = getCartData(1);
+$data = getCartData($_SESSION['memberid']);
 
 $total = 0.00;
 $tax = 0.00;

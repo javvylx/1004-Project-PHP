@@ -32,7 +32,7 @@ if (isset($_POST['login-submit'])){
 				}
 				else if($pwdCheck == true){
 					session_start();
-					$_SESSION['memberid'] = $row['member_id'];
+					$_SESSION['memberid'] = $row['user_id'];
 					$_SESSION['email'] = $row['email'];
 					$_SESSION["loginflag"] =1;
 					$success = true;
