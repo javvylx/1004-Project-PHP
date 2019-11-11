@@ -81,10 +81,10 @@ $shipping = 10.00;
 
             <!-- Start of the table row 1 -->
             <?php
-                if($data->num_rows>0){
-                    while($row = mysqli_fetch_assoc($data)){
+                if ($data->num_rows>0) {
+                    while ($row = mysqli_fetch_assoc($data)) {
                         $total += $row["product_price"];
-                        
+
                         echo "<tr>";
                         echo    "<td scope='row'>";
                         echo        "<div class='p-2'>";
@@ -100,11 +100,8 @@ $shipping = 10.00;
                         echo        "</td>";
                         echo    "</form>";
                         echo "</tr>";
-                        
                     }
-                }
-                else{
-                  
+                } else {
                 }
             ?>
             <!-- End of table row 1 -->
@@ -129,13 +126,13 @@ $shipping = 10.00;
       <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Coupon code</div>
       <div class="p-4">
         <p class="font-italic mb-4">If you have a coupon code, please enter it in the box below</p>
-        <form action="process_coupon.php" method="post">
+        <form action="check_coupon.php" method="post">
 
           <div class="input-group mb-4 border rounded-pill p-2">
-            <input type="text" name ="coupon" placeholder="Apply Coupon" aria-describedby="button-addon3" class="form-control border-0">
+            <input type="text" name ="coupon" placeholder="Check Coupon" aria-describedby="button-addon3" class="form-control border-0">
 
             <div class="input-group-append border-0">
-              <button type="submit" name="submit" value="Apply Coupon" class="btn btn-dark px-4 rounded-pill">Apply Coupon</button>
+              <button type="submit" name="submit" value="Check Coupon" class="btn btn-dark px-4 rounded-pill">Check Coupon</button>
             </div>
           </div>
         </form>
