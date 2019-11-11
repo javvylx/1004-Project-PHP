@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/x-icon" href="../../images/Favicon/favicon.png">
-        <title>Sign Up</title>
+        <title>Register</title>
 
         <!-- Bootstrap -->
         <link href="../../css/bootstrap-css.min.css" rel="stylesheet" type="text/css"/>
@@ -21,143 +21,137 @@
 
     <body>
 
-        <!-- Header-->
-        <?php include "../../header.php"; ?>
-        <!-- Header-->
+<!-- Header-->
+<?php include "../../header.php"; ?>
+<!-- Header-->
 
 
-        <!--Start of Breadcrumb -->
-        <div class="container-fluid-remove-paddings">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="../../index.php">Home</a></li>
-                    <li class="breadcrumb-item"><a href="Login Page.php">Membership Portal</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Sign Up</li>
-                </ol>
-            </nav>
-        </div>
-        <!--End of Breadcrumb -->
+<!--Start of Breadcrumb -->
+<div class="container-fluid-remove-paddings">
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="../../index.php">Home</a></li>
+			<li class="breadcrumb-item"><a href="Login Page.php">Membership Portal</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Sign Up</li>
+		</ol>
+	</nav>
+</div>
+<!--End of Breadcrumb -->
 
-        <!--Start of contents -->
+<!--Start of contents -->
+<div class="container py-auto px-auto">
 
+	<div class="container" id="page1">
+		<!-- Title of the the page-->
+		<div class="jumbotron" id="jumboTron">
+			<h1>Sign Up</h1>
+			<h2>Create your account</h2>
+		</div>
+	</div>
+	<?php
+	if (isset($_GET["error"])) {
+		if ($_GET['error'] == "emptyfields") {
+			echo "<p class='errormsg'> Error: Please fill in all the fields! </p>";
+		} elseif ($_GET["error"] == "invalidfirstname") {
+			echo '<p class="errormsg"> Error: Invalid First Name! Only letters and white space allowed!</p>';
+		} elseif ($_GET["error"] == "invalidlastname") {
+			echo '<p class="errormsg"> Error: Invalid Last Name! Only letters and white space allowed!</p>';
+		} elseif ($_GET["error"] == "invalidemail") {
+			echo '<p class="errormsg"> Error: Invalid Email Address Format!</p>';
+		} elseif ($_GET["error"] == "passwordcheck") {
+			echo '<p class="errormsg"> Error: Your password do not match!</p>';
+		} elseif ($_GET["error"] == "emailtaken") {
+			echo '<p class="errormsg"> Error: Email address has already been taken! </p>';
+		}
+	} elseif ($_GET["signup"] == "success") {
+		echo "<p class='errormsg'>Thank you for signing up for Watch Me! Click here to return to <a href='Login Page.php'><u>:Login Page</u></a></p>";
+	}
+	?>
+	<section class="container">
+		<form action="process_register.php" method="POST">
+			<!--First name-->
+			<div class ="form-group">
+				<label for ="firstname">First Name:</label>
+				<input type="text" class ="form-control" name="fname">
+			</div>
 
-        <div class="container py-auto px-auto">
+			<!--Last name-->
+			<div class ="form-group">
+				<label for ="lastname">Last Name:</label>
+				<input type="text" class ="form-control" name="lname">
+			</div>
 
-            <div class="container" id="page1">
-                <!-- Title of the the page-->
-                <div class="jumbotron" id="jumboTron">
-                    <h1>Sign Up</h1>
-                    <h2>Create your account</h2>
-                </div>
-            </div>
-            <?php
-            if (isset($_GET["error"])) {
-                if ($_GET['error'] == "emptyfields") {
-                    echo "<p class='errormsg'> Error: Please fill in all the fields! </p>";
-                } elseif ($_GET["error"] == "invalidfirstname") {
-                    echo '<p class="errormsg"> Error: Invalid First Name! Only letters and white space allowed!</p>';
-                } elseif ($_GET["error"] == "invalidlastname") {
-                    echo '<p class="errormsg"> Error: Invalid Last Name! Only letters and white space allowed!</p>';
-                } elseif ($_GET["error"] == "invalidemail") {
-                    echo '<p class="errormsg"> Error: Invalid Email Address Format!</p>';
-                } elseif ($_GET["error"] == "passwordcheck") {
-                    echo '<p class="errormsg"> Error: Your password do not match!</p>';
-                } elseif ($_GET["error"] == "emailtaken") {
-                    echo '<p class="errormsg"> Error: Email address has already been taken! </p>';
-                }
-            } elseif ($_GET["signup"] == "success") {
-                echo "<p class='errormsg'>Thank you for signing up for Watch Me! Click here to return to <a href='Login Page.php'><u>:Login Page</u></a></p>";
-            }
-            ?>
-            <section class="container">
-                <form action="process_register.php" method="POST">
-                    <!--First name-->
-                    <div class ="form-group">
-                        <label for ="firstname">First Name:</label>
-                        <input type="text" class ="form-control" name="fname">
-                    </div>
+			<!--Email-->
+			<div class ="form-group">
+				<label for ="email">Email:</label>
+				<input type="text" class ="form-control" name="email">
+			</div>
 
-                    <!--Last name-->
-                    <div class ="form-group">
-                        <label for ="lastname">Last Name:</label>
-                        <input type="text" class ="form-control" name="lname">
-                    </div>
+			<!--Password-->
+			<div class ="form-group">
+				<label for ="pass">Password:</label>
+				<input type="password" class ="form-control" name="pwd">
+			</div>
+			<!--Confirm Password-->
+			<div class ="form-group">
+				<label for ="confirmpass">Confirm Password:</label>
+				<input type="password" class ="form-control" name="cpwd">
+			</div>
 
-                    <!--Email-->
-                    <div class ="form-group">
-                        <label for ="email">Email:</label>
-                        <input type="text" class ="form-control" name="email">
-                    </div>
+			<!--Agree to terms and conditions-->
+			<div class="checkbox">
+				<input type="checkbox" required name="terms">
+				<a href="#" data-toggle="modal" data-target="#mymodal"><label for = 'checkbox' id="condition">Agree to terms and conditions</label></a>
+			</div>
 
-                    <!--Password-->
-                    <div class ="form-group">
-                        <label for ="pass">Password:</label>
-                        <input type="password" class ="form-control" name="pwd">
-                    </div>
-                    <!--Confirm Password-->
-                    <div class ="form-group">
-                        <label for ="confirmpass">Confirm Password:</label>
-                        <input type="password" class ="form-control" name="cpwd">
-                    </div>
+			<input type="submit" class ="btn btn-primary btn-lg" name="signup-submit">
+			&nbsp; &nbsp;&nbsp; &nbsp;<input type="reset" value="Clear" class ="btn btn-danger btn-lg" name="Clear">
 
-                    <!--Agree to terms and conditions-->
-                    <div class="checkbox">
-                        <input type="checkbox" required name="terms">
-                        <a href="#" data-toggle="modal" data-target="#mymodal"><label for = 'checkbox' id="condition">Agree to terms and conditions</label></a>
-                    </div>
-
-                    <input type="submit" class ="btn btn-primary btn-lg" name="signup-submit">
-                    &nbsp; &nbsp;&nbsp; &nbsp;
-                    <input type="reset" value="Clear" class ="btn btn-danger btn-lg" name="Clear">
-
-                    <!--Pop Up -->
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="modal fade" id="mymodal">
-                                    <div class="modal-dialog ">
-                                        <div class="modal-content">
+			<!--Pop Up -->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="modal fade" id="mymodal">
+							<div class="modal-dialog ">
+								<div class="modal-content">
 
 
-                                            <div class="modal-header">
-                                                <h1>Terms and Conditions</h1>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h6>
+									<div class="modal-header">
+										<h1>Terms and Conditions</h1>
+									</div>
+									<div class="modal-body">
+										<h6>
 
-                                                    Watch.me is an online service provided by Watch.Me Ptd Ltd.
-                                                    <br>
-                                                    You become a member of Watch.Me and be able to use all the services we provide.<br>
-                                                    This Agreement takes effect as soon as you indicate your acceptance of these terms.<br>
-                                                    By accepting the terms, you represent that you are at least the legal age of Singapore.<br>
-                                                    Our products that you purchase can only be use for your own personal use.<br>
-                                                    A violation of any of the Terms will result in an immediate termination of your Services
+											Watch.me is an online service provided by Watch.Me Ptd Ltd.
+											<br>
+											You become a member of Watch.Me and be able to use all the services we provide.<br>
+											This Agreement takes effect as soon as you indicate your acceptance of these terms.<br>
+											By accepting the terms, you represent that you are at least the legal age of Singapore.<br>
+											Our products that you purchase can only be use for your own personal use.<br>
+											A violation of any of the Terms will result in an immediate termination of your Services
 
-                                                </h6>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <input class="btn btn-primary" data-dismiss="modal" value="Close">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+										</h6>
+									</div>
+									<div class="modal-footer">
+										<input class="btn btn-primary" data-dismiss="modal" value="Close">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</section>
+</div>
+<!--End of contents -->
 
-
-
-                </form>
-            </section>
-        </div>
-        <!--End of contents -->
-
-        <!--footer-->
-        <?php include "../../footer.php" ?>
-        <!--footer-->
+<!--footer-->
+<?php include "../../footer.php" ?>
+<!--footer-->
 
 
-        <!--JS Plug In-->
+<!--JS Plug In-->
         <script src="../../js/jquery-3.3.1.min.js"></script>
         <script src="../../js/bootstrap-4.3.1.js"></script>
         <script src="../../js/Membership Portal/Membership.js"></script>

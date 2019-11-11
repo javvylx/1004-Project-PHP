@@ -7,7 +7,7 @@ Membership Portal: Line 337 to 368        Done by: Amitpaul Singh Sandhu
 Product Overview: Line 370 to 458         Done by: Lim Zheng Hao, Javier
 Shopping Cart: Line 460 to 467            Done by: Lim Keat Hui, Justin
 Contact Us: Line 470 to 524               Done by: Lim Keat Hui, Justin
-
+Payment Portal: Line 470 to 524           Done by: Lim Zheng Hao, Javier
 */
 
 /*************************** Start of Skeleton (Including Navbar & Footer) ***************************/
@@ -528,3 +528,62 @@ textarea {
 }
 
 /********************************************** End of Contact Us *******************************************/
+
+/********************************************** Start of Payment Portal *******************************************/
+.containercolumn-half {
+ flex: 50%;
+ padding: 0 18px;
+}
+
+.containercolumn-center {
+ flex: 75%;
+ padding: 0 18px;
+}
+
+.containerbox {
+  padding: 5px 20px 15px 20px;
+  margin: 40px 0px 40px 0px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text][id="paymentinfo"] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label {
+  margin-bottom: 15px;
+  display: block;
+}
+
+.btnbillinginfo {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btnbillinginfo :hover {
+  background-color: #45a049;
+}
+
+
+@media (max-width: 800px) {
+  .row {
+	flex-direction: column-reverse;
+  }
+  .col-25 {
+	margin-bottom: 20px;
+  }
+}
+
+/********************************************** End of Payment Portal *******************************************/
