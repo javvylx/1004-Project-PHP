@@ -46,7 +46,25 @@
       <p>Please fill out the quick form and we will be in touch with you at lightning speed.</p>
     </div>
 
-    <form action="process_contactus.php" method="post">
+    <?php
+    if (isset($_GET["error"])) {
+        if ($_GET['error'] == "emptyfields") {
+            echo "<p class='errormsg'> Error: Please fill in all the fields! </p>";
+        }  elseif ($_GET["error"] == "invalidfirstname") {
+            echo '<p class="errormsg"> Error: Invalid First Name! Only letters and white space allowed!</p>';
+        } elseif ($_GET["error"] == "invalidlastname") {
+          echo '<p class="errormsg"> Error: Invalid Last Name!</p>';
+        } elseif ($_GET["error"] == "invalidsubject") {
+            echo '<p class="errormsg"> Error: Invalid Subject!</p>';
+        } elseif ($_GET["error"] == "invalidemail") {
+            echo '<p class="errormsg"> Error: Invalid Email Address Format!</p>';
+        } elseif ($_GET["error"] == "invalidmessage") {
+            echo '<p class="errormsg"> Error: Invalid Message</p>';
+        }
+    }
+    ?>
+
+    <form action="process_contactus.php" method="POST">
       <div>
         <input type="text" name="fname" class="form-control1 center" placeholder="Enter First Name" required pattern='(?=.*[a-z])(?=.*[A-Z]).{3,}'>
       </div>
@@ -67,7 +85,7 @@
         <textarea name="message" class="form-control2 center" rows="5" placeholder="Message" required '(?=.*[a-z])(?=.*[A-Z]).{5,}'></textarea>
       </div>
 
-      <input type="Submit" value="Submit" class="btn btn-danger padding2 center">
+      <input type="submit" value="Submit" class="btn btn-danger padding2 center">
 
     </form>
   </div>
