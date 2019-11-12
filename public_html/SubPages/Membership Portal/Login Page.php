@@ -23,6 +23,9 @@
 <body>
 	<?php
     include "../../header.php";
+	if (isset($_SESSION["loginflag"])) {
+		header("Location: ../../index.php");
+	}
     ?>
 <!--Start of Breadcrumb -->
   <div class="container-fluid-remove-paddings">
