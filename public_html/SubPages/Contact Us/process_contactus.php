@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 # Global variables
 $fname = $lname =  $email = $message = $subject= "";
 $errorMsg = "";
@@ -51,7 +52,25 @@ else{
 
   $body = '<h4>Message</h4><p>'. $message.'</p>';
 
-  mail($company_email,$subject,$body,$headers);
-}
+  if (mail($company_email,$subject,$body,$headers))
+  {
+        $success *= true;
+  }
 
+  else {
+    $success *= false;
+  }
+}
 ?>
+
+<?php if ($success): ?>
+  <script>
+  alert("Good News! Message has been successfully send.");
+    window.location.href = "Contact Us.php";
+    </script>
+<?php else:  ?>
+  <script>
+  alert("Error: Message was not sent successfully.");
+  window.location.href = "Contact Us.php";
+  </script>
+<?php endif; ?>

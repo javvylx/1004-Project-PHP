@@ -1,6 +1,6 @@
 <?php
 require '../Function.php';
-
+error_reporting(0);
 define("DBHOST", "161.117.122.252");
 define("DBNAME", "p5_7");
 define("DBUSER", "p5_7");
