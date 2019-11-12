@@ -40,7 +40,11 @@ $shipping = 10.00;
 <body>
 
   <!-- Header-->
-  <?php include "../../header.php"; ?>
+  <?php include "../../header.php"; 
+	if (!isset($_SESSION["loginflag"])) {
+		header("Location: ../../index.php");
+	}
+  ?>
   <!-- Header-->
 
 <!--Start of Breadcrumb -->
