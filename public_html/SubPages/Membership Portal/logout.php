@@ -19,10 +19,13 @@
 
     <body>
         <!-- Header-->
-        <?php include "../../header.php"; ?>
+        <?php include "../../header.php";
+		?>
+		
         <!-- Header-->
 
         <!-- Codes to be implemented [Content] -->
+		<p><p>
         <div class="container">
             <div class="jumbotron" id="jumboTron">
                 <h2>
@@ -32,8 +35,7 @@
                 <h3>
                     You have successfully logged out.
                 </h3>
-            </div>
-
+			</div>
             <div class="row py-3">
             <div class="px-3">
                 <a href="../../index.php"><button type='button' class='btn btn-outline-secondary btn-lg btn-block'>Return Home</button> </a>

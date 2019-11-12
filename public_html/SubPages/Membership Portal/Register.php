@@ -66,7 +66,7 @@
                     echo '<p class="errormsg"> Error: Email address has already been taken! </p>';
                 }
             } elseif ($_GET["signup"] == "success") {
-                echo "<p class='errormsg'>Thank you for signing up for Watch Me! Click here to return to <a href='Login Page.php'><u>:Login Page</u></a></p>";
+                echo "<p class='errormsg'>Thank you for signing up for Watch Me! Click here to return to <a href='Login Page.php'><u>Login Page</u></a></p>";
             }
             ?>
             <section class="container">
