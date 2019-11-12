@@ -56,7 +56,7 @@
       </div>
       <br>
       <div>
-        <input type="text" name="email" class="form-control1 center" placeholder="Enter Email">
+        <input type="email" name="email" class="form-control1 center" placeholder="Enter Email" required>
       </div>
       <br>
       <div>

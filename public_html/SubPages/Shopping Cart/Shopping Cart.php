@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 include '../Function.php';
-
+error_reporting(0);
 define("DBHOST", "161.117.122.252");
 define("DBNAME", "p5_7");
 define("DBUSER", "p5_7");
@@ -9,7 +9,9 @@ define("DBPASS", "Q2Zp6mlCeq");
 
 $data = getCartData($_SESSION['memberid']);
 
-$total = 0.00;
+
+
+$total  = 0.00;
 $tax = 0.00;
 $shipping = 10.00;
 
@@ -126,16 +128,25 @@ $shipping = 10.00;
       <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Coupon code</div>
       <div class="p-4">
         <p class="font-italic mb-4">If you have a coupon code, please enter it in the box below</p>
+        <?php if ($_SESSION['$success'] == 1): ?>
+          <form action="" method="">
+              <h4><strong>Coupon Applied</strong></h4>
+
+                <div class="input-group-append border-0">
+                </div>
+            </form>
+        <?php else: ?>
         <form action="check_coupon.php" method="post">
 
           <div class="input-group mb-4 border rounded-pill p-2">
             <input type="text" name ="coupon" placeholder="Check Coupon" aria-describedby="button-addon3" class="form-control border-0">
-
-            <div class="input-group-append border-0">
-              <button type="submit" name="submit" value="Check Coupon" class="btn btn-dark px-4 rounded-pill">Check Coupon</button>
+              <div class="input-group-append border-0">
+                <button type="submit" name="submit" value="Apply Coupon" class="btn btn-dark px-4 rounded-pill">Apply Coupon</button>
             </div>
           </div>
         </form>
+            <?php endif; ?>
+
       </div>
 
       <!--Coupon End-->
@@ -155,11 +166,12 @@ $shipping = 10.00;
       <div class="p-4">
         <p class="font-italic mb-4">Shipping and additional costs are calculated based on values you have entered.</p>
         <ul class="list-unstyled mb-4">
-          <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>$<?php echo number_format((float)$total,2,'.','') ?></strong></li>
-          <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and handling</strong><strong>$<?php echo number_format((float)$shipping,2,'.','') ?></strong></li>
-          <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>$<?php echo number_format((float)$tax,2,'.','') ?></strong></li>
+          <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Order Subtotal </strong><strong>$<?php echo $total ?></strong></li>
+          <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Shipping and handling</strong><strong>$10.00</strong></li>
+          <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>$0.00</strong></li>
           <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
-            <h5 class="font-weight-bold">$<?php $cost = $total+$shipping+$tax; echo number_format((float)$cost,2,'.','') ?></h5>
+            <h5 class="font-weight-bold">$<?php echo $cost = $total+$shipping+$tax ?></h5>
+            <?php $_SESSION['cost'] = $cost; ?>
           </li>
         </ul>
         <form action="process_checkout.php" method="post">

@@ -1,3 +1,34 @@
+<?php
+require '../Function.php';
+
+define("DBHOST", "161.117.122.252");
+define("DBNAME", "p5_7");
+define("DBUSER", "p5_7");
+define("DBPASS", "Q2Zp6mlCeq");
+
+$conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
+
+$data = getCartData($_SESSION['memberid']); // return the query result
+
+$cost = $_SESSION['cost'];
+
+if ($_SESSION['coupon'] == 1)
+{
+  // get coupon multiplier values
+  $sql = "SELECT * FROM p5_7.wm_coupon WHERE p5_7.wm_coupon.coupon_code = '" .$_SESSION["couponcode"]. "';";
+  $result = $conn ->query($sql);
+  $row = $result -> fetch_assoc();
+  $discount = $row ["coupon_dis"];
+  $multiplier = (100 - $discount)/ 100;
+  $finaltotal = $cost * $multiplier;
+}
+else{
+    $finaltotal = $cost;
+}
+
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -19,13 +50,23 @@
 
 <body>
   <!-- Header-->
-  <?php include "header.php"; ?>
+  <?php include "../../header.php"; ?>
   <!-- Header-->
 
 <!-- Codes to be implemented [Content] -->
+<div class="container col-lg-6 py-5">
+  <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary </div>
+    <ul class="list-unstyled">
+      <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total </strong><strong>$<?php echo $cost ?></strong></li>
+      <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Discount Multiplier</strong><strong><?php echo  $discount."%" ?></strong></li>
+      <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Final Total Cost</strong><strong><?php echo '$'.number_format((float)$finaltotal,2,'.','') ?></strong>
+      </li>
+    </ul>
+  </div>
+
 
   <!--footer-->
-  <?php include "footer.php" ?>
+  <?php include "../../footer.php" ?>
   <!--footter-->
 
 
