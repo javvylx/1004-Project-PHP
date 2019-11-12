@@ -62,6 +62,7 @@ else{
       <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Final Total Cost</strong><strong><?php echo '$'.number_format((float)$finaltotal,2,'.','') ?></strong>
       </li>
     </ul>
+    <a href="payment.php" class=" mx-auto btn btn-outline-primary row d-flex justify-content-center"> Payment Page</a>
   </div>
 
 

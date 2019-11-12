@@ -171,7 +171,6 @@ $shipping = 10.00;
           <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tax</strong><strong>$0.00</strong></li>
           <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong>
             <h5 class="font-weight-bold">$<?php echo $cost = $total+$shipping+$tax ?></h5>
-            <?php $_SESSION['cost'] = $cost; ?>
           </li>
         </ul>
         <form action="process_checkout.php" method="post">
@@ -200,3 +199,4 @@ $shipping = 10.00;
 
 </body>
 </html>
+<?php $_SESSION['cost'] = $cost; ?>
