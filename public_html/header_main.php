@@ -13,6 +13,11 @@ if ($_SESSION["loginflag"] == 1):
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item">
+                            <a href="SubPages/Membership Portal/Profile.php" class="nav-link m-2 menu-item"  >Profile</a>
+                        </li>
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
 
@@ -25,11 +30,13 @@ if ($_SESSION["loginflag"] == 1):
                         <li class="nav-item">
                             <a href="SubPages/Shopping Cart/Shopping Cart.php" class="nav-link m-2 menu-item">Shopping Cart</a>
                         </li>
+
                         <li class="nav-item">
-                            <a href="SubPages/Membership Portal/Profile.php" class="nav-link m-2 menu-item"  >Profile</a>
+                            <a href="SubPages/Contact Us/Contact Us.php" class="nav-link m-2 menu-item">Contact Us</a>
                         </li>
+
                         <li class="nav-item">
-                            <a href="SubPages/Membership Portal/process_logout.php" class="nav-link m-2 menu-item"  >Logout</a>
+                            <a href="SubPages/Membership Portal/process_logout.php" class="nav-link m-2 menu-item">Logout</a>
                         </li>
 
                     </ul>
@@ -63,7 +70,7 @@ if ($_SESSION["loginflag"] == 1):
                             </li>
 
                             <li class="nav-item">
-                                <a href="SubPages/Membership Portal/Login Page.php" class="nav-link m-2 menu-item">Membership Portal</a>
+                                <a href="SubPages/Membership Portal/Login Page.php" class="nav-link m-2 menu-item"> Login Portal</a>
                             </li>
 
                         </ul>

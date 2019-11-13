@@ -13,6 +13,11 @@ if ($_SESSION["loginflag"] == 1):
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item">
+                            <a href="SubPages/Membership Portal/process_profile.php">Profile</a>
+                        </li>
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
 
@@ -26,13 +31,8 @@ if ($_SESSION["loginflag"] == 1):
                             <a href="../Shopping Cart/Shopping Cart.php" class="nav-link m-2 menu-item">Shopping Cart</a>
                         </li>
 
-
                         <li class="nav-item">
                             <a href="../Contact Us/Contact Us.php" class="nav-link m-2 menu-item">Contact Us</a>
-                        </li>
-                        <li class="nav-item">
-
-                            <a href="SubPages/Membership Portal/process_profile.php"></a>
                         </li>
 
                         <li class="nav-item">
