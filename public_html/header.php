@@ -15,7 +15,7 @@ if ($_SESSION["loginflag"] == 1):
                     <ul class="navbar-nav ml-auto">
 
                         <li class="nav-item">
-                            <a href="SubPages/Membership Portal/process_profile.php">Profile</a>
+                            <a href="../Membership Portal/Profile.php" class="nav-link m-2 menu-item">Profile</a>
                         </li>
 
                         <li class="nav-item dropdown">

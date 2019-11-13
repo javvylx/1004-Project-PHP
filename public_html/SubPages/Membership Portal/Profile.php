@@ -14,6 +14,9 @@ $data = getUserData($_SESSION['memberid']);
 ?>
 <html lang="en" dir="ltr">
 
+<!-- Header-->
+<?php include "../../header.php"; ?>
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +24,6 @@ $data = getUserData($_SESSION['memberid']);
         <link rel="shortcut icon" type="image/x-icon" href="../../images/Favicon/favicon.png">
 
         <!-- Bootstrap -->
-        <link href="../../css/bootstrap-css.min.css" rel="stylesheet" type="text/css" />
         <link href="../../css/bootstrap.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -31,8 +33,6 @@ $data = getUserData($_SESSION['memberid']);
     </head>
 
     <body>
-        <!-- Header-->
-        <?php include "../../header.php"; ?>
         <!-- Codes to be implemented [Content] -->
         <!--Start of Breadcrumb -->
         <div class="container-fluid-remove-paddings">
@@ -50,7 +50,7 @@ $data = getUserData($_SESSION['memberid']);
             <div class="container">
                 <!-- Title of the the page-->
                 <div class="jumbotron" id="jumboTron">
-                    <h1>My Profile</h1>
+                    <h1>Profile Page</h1>
                 </div>
 
             </div>
@@ -59,10 +59,10 @@ $data = getUserData($_SESSION['memberid']);
                     <!--Email-->
                     <div class ="form-group">
                         <label for ="email">Email:</label>
-                        <input type="text" class ="form-control" name="email" readonly="true" id="email" value="<?php 
+                        <input type="text" class ="form-control" name="email" readonly="true" id="email" value="<?php
                         if ($data->num_rows > 0) {
                             $row = mysqli_fetch_array($data);
-                                echo $row["email"];
+                            echo $row["email"];
                         }
                                 ?>">
                             </div>
@@ -70,7 +70,7 @@ $data = getUserData($_SESSION['memberid']);
                             <!--First name-->
                             <div class ="form-group">
                                 <label for ="firstname">First Name:</label>
-                                <input type="text" class ="form-control" name="fname" readonly="true" id="fName" value="<?php 
+                                <input type="text" class ="form-control" name="fname" readonly="true" id="fName" value="<?php
                                 echo $row["fname"];
                                 ?>">
                             </div>
@@ -78,9 +78,9 @@ $data = getUserData($_SESSION['memberid']);
                             <!--Last name-->
                             <div class ="form-group">
                                 <label for ="lastname">Last Name:</label>
-                                <input type="text" class ="form-control" name="lname" readonly="true" id="lName" value="<?php 
+                                <input type="text" class ="form-control" name="lname" readonly="true" id="lName" value="<?php
                                 echo $row["lname"];
-                           
+
                             ?>">
                         </div>
 
