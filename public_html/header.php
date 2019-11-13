@@ -28,7 +28,7 @@
 
 
               <li class="nav-item">
-                <a href="SubPages/Contact Us/Contact Us.php" class="nav-link m-2 menu-item">Contact Us</a>
+                <a href="../Contact Us/Contact Us.php" class="nav-link m-2 menu-item">Contact Us</a>
               </li>
 
 							<li class="nav-item">
