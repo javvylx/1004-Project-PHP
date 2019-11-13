@@ -5,6 +5,7 @@ $errorMsg = "";
 $success = true;
 $loginflag=0;
 
+
 # Check_empty Function
 function check_empty($data)
 {
@@ -66,5 +67,25 @@ function getWatchdata($id){
         $result = $conn->query($sql);
         return $result;
     }
+}
+
+function getUserData($id){
+    $id;
+
+    // Create Conn
+    $conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
+    // Check Conn
+    if($conn->connect_error){
+        $errorMsg = "Connection failed: " . $conn->connect_error;
+        $success = false;
+    }
+    else{
+        $sql = "SELECT * FROM p5_7.wm_users
+                WHERE p5_7.wm_users.user_id=" . $id . ";";
+        // Execute query
+        $result = $conn->query($sql);
+        return $result;
+    }
+    $conn->close();
 }
  ?>
