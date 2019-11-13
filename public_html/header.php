@@ -26,12 +26,13 @@
 								<a href="../Shopping Cart/Shopping Cart.php" class="nav-link m-2 menu-item">Shopping Cart</a>
 							</li>
 
+
               <li class="nav-item">
                 <a href="SubPages/Contact Us/Contact Us.php" class="nav-link m-2 menu-item">Contact Us</a>
               </li>
 
 							<li class="nav-item">
-							<a href="../Membership Portal/process_logout.php" class="nav-link m-2 menu-item"  >Logout</a>
+							<a href="../Membership Portal/process_logout.php" class="nav-link m-2 menu-item">Logout</a>
 							</li>
 
 					  </ul>
@@ -65,12 +66,13 @@
 						</li>
 
 						<li class="nav-item">
-							<a href="../Membership Portal/Login Page.php" class="nav-link m-2 menu-item">Membership Portal</a>
+							<a href="../Contact Us/Contact Us.php" class="nav-link m-2 menu-item">Contact Us</a>
 						</li>
 
 						<li class="nav-item">
-							<a href="../Contact Us/Contact Us.php" class="nav-link m-2 menu-item">Contact Us</a>
+							<a href="../Membership Portal/Login Page.php" class="nav-link m-2 menu-item">Login Portal</a>
 						</li>
+
 
 				  </ul>
 				</div>
