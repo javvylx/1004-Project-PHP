@@ -58,7 +58,7 @@
                 </div>
                 <div class="product-content">
                     <h3 class="title"><a href="../Individual Product Pages/Sports Casio DW 5900-1ER.php">Casio DW-5900-1ER</a></h3>
-                    <span class="price">$120.75</span>
+                    <span class="price">$134.40</span>
                 </div>
             </div>
         </div>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="product-content">
                     <h3 class="title"><a href="../Individual Product Pages/Sports Casio SWV-58U-1AVEF.php">Casio SWV-58U-1AVEF</a></h3>
-                    <span class="price">$68.88</span>
+                    <span class="price">$96.67</span>
                 </div>
             </div>
         </div>

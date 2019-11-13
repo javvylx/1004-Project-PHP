@@ -177,10 +177,16 @@ $shipping = 10.00;
             <h5 class="font-weight-bold">$<?php echo $cost = $total+$shipping+$tax ?></h5>
           </li>
         </ul>
-        <form action="process_checkout.php" method="post">
-            <button type="submit" value ="submit" class="btn btn-dark rounded-pill py-2 btn-block">Proceed to checkout</button>
-        </form>
-
+        <?php
+        if ($total == 0){
+            echo    "<button type='submit' value ='submit' class='btn btn-dark rounded-pill py-2 btn-block' disabled>Proceed to checkout</button>";
+        }
+        else{
+            echo "<form action='process_checkout.php' method='post'>";
+            echo    "<button type='submit' value ='submit' class='btn btn-dark rounded-pill py-2 btn-block'>Proceed to checkout</button>";
+            echo "</form>";  
+        }
+        ?>
       </div>
     </div>
   <!--End of Order Summary-->

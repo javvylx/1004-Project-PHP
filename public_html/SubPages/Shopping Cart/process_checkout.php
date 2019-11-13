@@ -23,6 +23,7 @@ if ($_SESSION['coupon'] == 1)
   $finaltotal = $cost * $multiplier;
 }
 else{
+    $discount = 0;
     $finaltotal = $cost;
 }
 
@@ -58,7 +59,7 @@ else{
   <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary </div>
     <ul class="list-unstyled">
       <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total </strong><strong>$<?php echo $cost ?></strong></li>
-      <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Discount Multiplier</strong><strong><?php echo  $discount."%" ?></strong></li>
+      <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Discount</strong><strong><?php echo  $discount."%" ?></strong></li>
       <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Final Total Cost</strong><strong><?php echo '$'.number_format((float)$finaltotal,2,'.','') ?></strong>
       </li>
     </ul>

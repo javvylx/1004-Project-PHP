@@ -32,7 +32,7 @@
   <div class="containercolumn-center">
     <div class="container">
       <div class="containerbox">
-        <form action="" name="paymentform" onsubmit="return validateForm();">
+          <form action="process_transaction.php" method="post" name="paymentform" onsubmit="return validateForm();">
           <div class="row">
             <div class="containercolumn-half">
               <h3>Billing Information</h3>

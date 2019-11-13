@@ -59,7 +59,7 @@
                 </div>
                 <div class="product-content">
                     <h3 class="title"><a href="../Individual Product Pages/Casual Hugo Jump Watch.php">Hugo Jump Watch HG1530028</a></h3>
-                    <span class="price">S$307.85</span>
+                    <span class="price">S$294.85</span>
                 </div>
             </div>
         </div>
@@ -82,7 +82,7 @@
 				</div>
 				<div class="product-content">
 					<h3 class="title"><a href="../Individual Product Pages/Casual Hugo ONYX HB1513367.php">Hugo ONYX Watch HG1513367</a></h3>
-					<span class="price">S$122.57</span>
+					<span class="price">S$124.79</span>
 				</div>
 			</div>
 		</div>

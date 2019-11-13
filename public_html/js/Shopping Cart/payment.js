@@ -1,6 +1,6 @@
 // Declare Regular Expression
 var emailregex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-var numbernletterOnlyRegex = /^[a-zA-Z0-9-\s]*$/;
+var numbernletterOnlyRegex = /^[a-zA-Z0-9-#,\s]*$/;
 var lettersOnlyRegex =  /^[a-zA-Z-,]+(\s{0,1}[a-zA-Z-, ])*$/;
 var numbersOnlyRegex = /^[0-9]*(?:\.\d{1,2})?$/;
 var yearRegex = /^(201[9]|202\d|2030)$/
