@@ -102,7 +102,8 @@ $shipping = 10.00;
                         echo  "<td class='align-middle'><strong>$" . $row["product_price"] . "</strong></td>";
                         echo    "<form action='process_remove.php' method='post'>";
                         echo        "<td class='align-middle'>"
-                                        . "<input type='hidden' name='p_id' value=" . $row["cart_item_id"] . " />" . "<button type='submit' class='btn btn-danger' name='Remove'>Remove</button>";
+                                        . "<input type='hidden' name='p_id' value=" . $row["cart_item_id"] . " /><input type='hidden' name='c_id' value=" . $row["product_id"] . " />" 
+                                        . "<button type='submit' class='btn btn-danger' name='Remove'>Remove</button>";
                         echo        "</td>";
                         echo    "</form>";
                         echo "</tr>";

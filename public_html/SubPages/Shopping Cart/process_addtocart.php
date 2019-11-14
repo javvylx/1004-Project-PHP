@@ -1,7 +1,7 @@
 <?php
 include '../Function.php';
 if (!isset($_SESSION["loginflag"])) {
-		header("Location: ../../index.php");
+    header("Location: ../Membership Portal/Login Page.php");
 }
 define("DBHOST", "161.117.122.252");
 define("DBNAME", "p5_7");
@@ -18,10 +18,10 @@ if ($conn->connect_error) {
     $errorMsg = "Connection failed: " . $conn->connect_error;
     $success = false;
 } else {
-    $sql = "INSERT INTO wm_shoppingcart(user_id, product_id)"
-            . "VALUES(" . $u_id . ",". $p_id .")";
+    $sql = "INSERT INTO wm_shoppingcart(user_id, product_id)VALUES(" . $u_id . ",". $p_id .");";
+    $sql .= "UPDATE wm_products SET quantity = (quantity - 1) WHERE product_id=" . $p_id .";";
 
-    if ($conn->query($sql) === true) {
+    if (mysqli_multi_query($conn, $sql) === true) {
         echo "<meta http-equiv='refresh' content='0;URL=Shopping Cart.php' />";
     }
 }

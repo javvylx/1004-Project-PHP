@@ -90,12 +90,17 @@ $row = $watchData->fetch_assoc();
                 <h6><?php echo $row["brand"] ?></h6><br>
                 <h5>$<?php echo $row["product_price"] ?></h5><br><hr>
                 <h6><?php echo $row["quantity"] ?> in stock</h6><br><br>
-                <form action="../Shopping Cart/process_addtocart.php" method="post">
-                    <?php  
-                    echo "<input type='hidden' name='p_id' value=" . $row["product_id"] . " />"
-                    ?>
-                    <button type="submit" class="btn btn-primary addCartbtn">Add to Cart</button>
-                </form>
+                <?php
+                if ($row["quantity"] == 0){
+                    echo "<button type='submit' class='btn btn-danger addCartbtn' disabled>Sold out</button>";
+                }
+                else{
+                    echo "<form action='../Shopping Cart/process_addtocart.php' method='post'>";
+                        echo "<input type='hidden' name='p_id' value=" . $row["product_id"] . " />";
+                        echo "<button type='submit' class='btn btn-primary addCartbtn'>Add to cart</button>";
+                    echo "</form>";
+                }
+                ?>
             </div>
         </div>
     </div>
