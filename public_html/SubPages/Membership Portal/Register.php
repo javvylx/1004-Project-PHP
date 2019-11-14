@@ -74,7 +74,7 @@
             }
             ?>
             <section class="container">
-                <form action="process_register.php" method="POST">
+                <form action="process_register.php" method="POST" name="Register" onsubmit="return validateForm()">
                     <!--First name-->
                     <div class ="form-group">
                         <label for ="firstname">First Name:</label>
@@ -110,7 +110,7 @@
                         <a href="#" data-toggle="modal" data-target="#mymodal"><label for = 'checkbox' id="condition">Agree to terms and conditions</label></a>
                     </div>
 
-                    <input type="submit" class ="btn btn-primary btn-lg" name="signup-submit">
+                    <input type="submit" class ="btn btn-primary btn-lg" name="signup-submit" id="register">
                     &nbsp; &nbsp;&nbsp; &nbsp;
                     <input type="reset" value="Clear" class ="btn btn-danger btn-lg" name="Clear">
 
