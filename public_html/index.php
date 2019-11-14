@@ -64,7 +64,7 @@
 		<div class="centre text-center">
 		<div class="col-lg-12 col-md-12 col-sm-12"><h4><b>🎆Opening Promotion🎆</b></h4></div>
 		<div class="row">
-			<div class="col-lg-6 col-sm-6 col-sm-6">
+			<div class="col-lg-6">
 				<div class="textinimage">
 				<img src="images/HomePage/Promotion Images/Sunset watch.jpg" alt="Casual Watches Banner" title="Casual Watch Banner">
 				<div class="topcentered"><h5><b> Casual Watches Promotion <br></b></h5></div>
@@ -72,7 +72,7 @@
 					<button class="btn"><a href="SubPages/Product Overview/Casual Product Page.php">Shop Now</a></button>
 				</div>
 			</div>
-			<div class="col-lg-6 col-sm-6 col-sm-6">
+			<div class="col-lg-6">
 				<div class="textinimage">
 				<img src="images/HomePage/Promotion Images/Designer Watch Hands.jpg" alt="Sports Watches Banner" title="Sports Watches Banner">
 				<div class="topcentered"><h5><b> Sports Watches Promotion <br></b></h5></div>
@@ -91,28 +91,28 @@
       <section class="deliverysection">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-3 justify-content-center">
                     <div class="iconshopping">
                         <img src="images/HomePage/Shipping Icons/icon_1.png" alt="Free Local Delivery" title="Free Local Delivery">
                         <h4>Free Local Delivery</h4>
 						<p>Swift 1-business day delivery by trusted delivery partner: Ninja Van</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-3 justify-content-center">
                     <div class="iconshopping">
                         <img src="images/HomePage/Shipping Icons/icon_2.png" alt="Best Price Guaranteed" title="Best Price Guaranteed">
                         <h4>Best Price Guaranteed</h4>
                         <p>Competitive price point among other retailers</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-3 justify-content-center">
                     <div class="iconshopping">
                         <img src="images/HomePage/Shipping Icons/icon_3.png" alt="30 Days Return Policy" title="30 Days Return Policy">
                         <h4>30 Days Return Policy</h4>
                         <p>Unhappy with our product? Return it within 30 days for full refund</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-3 justify-content-center">
                     <div class="iconshopping">
                         <img src="images/HomePage/Shipping Icons/icon_4.png" alt="Delicated Hotline" title="Delicated Hotline">
                         <h4>Dedicated Hotline</h4>
