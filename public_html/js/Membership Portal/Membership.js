@@ -7,22 +7,19 @@
 
 
 function validateForm() {
-    var x = document.forms["signup"]["First Name"].value;
-    var x1 = document.forms ["signup"]["Last Name"].value;
-    var e = document.forms["signup"]["email"].value;
-    var ce = document.forms["signup"]["cemail"].value;
-    var fem = document.getElementById("F");
-    var male = document.getElementById("M");
-    var password = document.forms["signup"]["password"].value;
-    var cpassword = document.forms["signup"]["cpassword"].value;
-    var mobile = document.forms["signup"]["phone_num"].value;
-    var cmobile = document.forms["signup"]["cphone_num"].value;
+    var x = document.forms["Register"]["fname"].value;
+    var x1 = document.forms ["Register"]["lname"].value;
+    var e = document.forms["Register"]["email"].value;
+   
+    var password = document.forms["Register"]["pwd"].value;
+    var cpassword = document.forms["Register"]["cpwd"].value;
+ 
     var value = true;
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     var pw_test1 = /[a-z]/g;
     var pw_test2 = /[A-Z]/g;
     var pw_test3 = /[0-9]/g;
-    var phone_no = /[9|8]\d{7}$/;
+
     if (x === null || x === "") {
         alert("Name must be filled out");
         return false;
@@ -38,16 +35,7 @@ function validateForm() {
     } else if (re.test(e) === false) {
         alert("Email not valid");
         return false;
-    } else if (ce === null || ce === "") {
-        alert("Please confirm your email address");
-        return false;
-    } else if (e !== ce) {
-        alert("Email does not match!");
-        return false;
-    } else if (fem.checked === false && male.checked === false) {
-        alert("Please select a gender!");
-        return false;
-    } else if (password === null || password === "") {
+    }  else if (password === null || password === "") {
         alert("Password must be filled out");
         return false;
     } else if (pw_test1.test(password) === false) {
@@ -65,13 +53,7 @@ function validateForm() {
     } else if (password !== cpassword) {
         alert("Password does not match!");
         return false;
-    } else if (phone_no.test(mobile) === false) {
-        alert("Phone number is not valid!");
-        return false;
-    } else if (mobile !== cmobile) {
-        alert("Phone number does not match!");
-        return false;
-    } else if (value === true) {
+    }  else if (value === true) {
         alert("Full Name :" + x + " " + x1 + " \n Email :" + e);
         return true;
     }
@@ -104,6 +86,6 @@ function show_password() {
 
 
 
-document.getElementById("submit").addEventListener("click", validateForm());
+document.getElementById("register").addEventListener("click", validateForm());
 document.getElementById("check1").addEventListener("click", show_password());
 document.getElementById("check2").addEventListener("click", show_password());

@@ -12,6 +12,7 @@ if (!isset($_SESSION["loginflag"])) {
 }
 
 $p_id = $_POST['p_id'];
+$c_id = $_POST['c_id'];
 $u_id = $_SESSION["memberid"];
 
 // Create Conn
@@ -21,9 +22,11 @@ if ($conn->connect_error) {
     $errorMsg = "Connection failed: " . $conn->connect_error;
     $success = false;
 } else {
-    $sql = "DELETE FROM p5_7.wm_shoppingcart WHERE user_id=". $u_id ." AND cart_item_id=" . $p_id . ";";
+    $sql = "DELETE FROM wm_shoppingcart WHERE user_id=". $u_id ." AND cart_item_id=" . $p_id . ";";
+    $sql .= "UPDATE wm_products SET quantity = quantity + 1 WHERE product_id=" . $c_id .";";
 
-    if ($conn->query($sql) === true) {
+    if (mysqli_multi_query($conn, $sql) === true) {
         echo "<meta http-equiv='refresh' content='0;URL=Shopping Cart.php' />";
     }
 }
+?>

@@ -40,7 +40,7 @@ $shipping = 10.00;
 <body>
 
   <!-- Header-->
-  <?php include "../../header.php"; 
+  <?php include "../../header.php";
 	if (!isset($_SESSION["loginflag"])) {
 		header("Location: ../../index.php");
 	}
@@ -102,7 +102,8 @@ $shipping = 10.00;
                         echo  "<td class='align-middle'><strong>$" . $row["product_price"] . "</strong></td>";
                         echo    "<form action='process_remove.php' method='post'>";
                         echo        "<td class='align-middle'>"
-                                        . "<input type='hidden' name='p_id' value=" . $row["cart_item_id"] . " />" . "<button type='submit' class='btn btn-danger' name='Remove'>Remove</button>";
+                                        . "<input type='hidden' name='p_id' value=" . $row["cart_item_id"] . " /><input type='hidden' name='c_id' value=" . $row["product_id"] . " />"
+                                        . "<button type='submit' class='btn btn-danger' name='Remove'>Remove</button>";
                         echo        "</td>";
                         echo    "</form>";
                         echo "</tr>";
@@ -150,19 +151,9 @@ $shipping = 10.00;
           </div>
         </form>
             <?php endif; ?>
-
       </div>
-
       <!--Coupon End-->
-
-      <!-- Special Instruction Start -->
-      <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Instructions for seller</div>
-      <div class="p-4">
-        <p class="font-italic mb-4">If you have some information for the seller you can leave them in the box below</p>
-        <textarea name="message" cols="30" rows="2" class="form-control" placeholder="Special Instructions"></textarea>
-      </div>
-    </div>
-    <!-- End of Special Instruction -->
+  </div>
 
     <!--Start of Order Summary-->
     <div class="col-lg-6">
@@ -184,13 +175,12 @@ $shipping = 10.00;
         else{
             echo "<form action='process_checkout.php' method='post'>";
             echo    "<button type='submit' value ='submit' class='btn btn-dark rounded-pill py-2 btn-block'>Proceed to checkout</button>";
-            echo "</form>";  
+            echo "</form>";
         }
         ?>
       </div>
     </div>
   <!--End of Order Summary-->
-
   </div>
 
 
@@ -198,7 +188,8 @@ $shipping = 10.00;
   <!--End of contents -->
 
   <!--footer-->
-  <?php include "../../footer.php" ?>
+      <?php include "../../footer.php" ?>
+
   <!--footter-->
 
 
