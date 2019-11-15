@@ -19,7 +19,7 @@ $data = getUserData($_SESSION['memberid']);
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon/favicon.png">
-
+        <title>Profile</title>
         <!-- Bootstrap -->
         <link href="../../css/bootstrap.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -53,6 +53,7 @@ $data = getUserData($_SESSION['memberid']);
             </div>
             <section class="container">
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+
                     <!--Email-->
                     <div class ="form-group">
                         <label for ="email">Email:</label>
@@ -105,47 +106,60 @@ $data = getUserData($_SESSION['memberid']);
 
                 </form>
             </section>
-            <!--footer-->
-            <?php include "../../footer.php"; ?>
-            <!--footer-->
+        </div>
+        <!--footer-->
+        <?php include "../../footer.php"; ?>
+        <!--footer-->
 
 
-            <!--JS Plug In-->
-            <script src="../../js/jquery-3.3.1.min.js"></script>
-            <script src="../../js/bootstrap-4.3.1.js"></script>
-            <script src="../../js/membership_portal/Membership.js"></script>
+        <!--JS Plug In-->
+        <script src="../../js/jquery-3.3.1.min.js"></script>
+        <script src="../../js/bootstrap-4.3.1.js"></script>
+<!--        <script src="../../js/membership_portal/Membership.js">-->
+        </script>
 
-            <?php
-            $conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
-            $databasepwd = "";
-            $data2 = getUserData($_SESSION['memberid']);
-            if ($data2->num_rows > 0) {
-                while ($row = mysqli_fetch_assoc($data2)) {
-                    $databasepwd = $row["password"];
-                }
+        <?php
+        $conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
+        $databasepwd = "";
+        $data2 = getUserData($_SESSION['memberid']);
+        if ($data2->num_rows > 0) {
+            while ($row = mysqli_fetch_assoc($data2)) {
+                $databasepwd = $row["password"];
             }
+        }
 
 
-            $password = $_POST['npwd'];
-            $cfmpassword = $_POST['cpwd'];
-            $oldpassword = $_POST['pwd'];
-            $errorMsg = "";
-            $success = true;
+        $password = $_POST['npwd'];
+        $cfmpassword = $_POST['cpwd'];
+        $oldpassword = $_POST['pwd'];
+        $errorMsg = "";
+        $success = true;
+        // Validate password strength
+        $uppercase = preg_match('@[A-Z]@', $password);
+        $lowercase = preg_match('@[a-z]@', $password);
+        $number = preg_match('@[0-9]@', $password);
+        $specialChars = preg_match('@[^\w]@', $password);
+        //$hash_old_pwd = password_hash($oldpassword, PASSWORD_DEFAULT);
 
-            //$hash_old_pwd = password_hash($oldpassword, PASSWORD_DEFAULT);
-
-            if (isset($_POST['update_profile'])) {
-
-                if (empty($oldpassword) || empty($password) || empty($cfmpassword)) {
-                    $errorMsg="Please do not leave any fields empty!";
-                    echo '<script language="javascript">';
-                    echo 'alert('.$errorMsg.')';
-                    echo '</script>';
-                } else {
-                    if (password_verify($oldpassword, $databasepwd)) {
-                        // echo "match";
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                
+            if (empty($oldpassword) || empty($password) || empty($cfmpassword)) {
+                
+                $errorMsg = "Please do not leave any fields empty!";
+                echo '<script language="javascript">';
+                echo 'alert(' . $errorMsg . ')';
+                echo '</script>';
+            } else {
+                if (password_verify($oldpassword, $databasepwd)) {
+                    // echo "match";
+                    if (!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
+                        
+                    } else {
                         if ($password == $cfmpassword) {
-
+                            $errorMsg = "Password should be at least be 8 characters in length and should include at least one upper case letter, one number, and one special character!";
+                            echo '<script language="javascript">';
+                            echo 'alert(' . $errorMsg . ')';
+                            echo '</script>';
                             $hash_cpw = password_hash($cfmpassword, PASSWORD_DEFAULT);
 
                             if ($conn->connect_error) {
@@ -164,17 +178,22 @@ $data = getUserData($_SESSION['memberid']);
                                 echo 'alert(' . $successMsg . ')';
                                 echo '</script>';
                             }
-                            
+                        } else {
+                            $errorMsg = "Password does not match!";
+                            echo '<script language="javascript">';
+                            echo 'alert(' . $errorMsg . ')';
+                            echo '</script>';
                         }
-                    } else {
-                       $errorMsg="Password does not match!";
-                    echo '<script language="javascript">';
-                    echo 'alert('.$errorMsg.')';
-                    echo '</script>';
                     }
+                } else {
+                    $errorMsg = "Password does not match!";
+                    echo '<script language="javascript">';
+                    echo 'alert(' . $errorMsg . ')';
+                    echo '</script>';
                 }
             }
-            ?>
+        }
+        ?>
     </body>
 
 </html>

@@ -10,10 +10,10 @@ function validateForm() {
     var x = document.forms["Register"]["fname"].value;
     var x1 = document.forms ["Register"]["lname"].value;
     var e = document.forms["Register"]["email"].value;
-   
+
     var password = document.forms["Register"]["pwd"].value;
     var cpassword = document.forms["Register"]["cpwd"].value;
- 
+
     var value = true;
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     var pw_test1 = /[a-z]/g;
@@ -35,7 +35,7 @@ function validateForm() {
     } else if (re.test(e) === false) {
         alert("Email not valid");
         return false;
-    }  else if (password === null || password === "") {
+    } else if (password === null || password === "") {
         alert("Password must be filled out");
         return false;
     } else if (pw_test1.test(password) === false) {
@@ -53,7 +53,7 @@ function validateForm() {
     } else if (password !== cpassword) {
         alert("Password does not match!");
         return false;
-    }  else if (value === true) {
+    } else if (value === true) {
         alert("Full Name :" + x + " " + x1 + " \n Email :" + e);
         return true;
     }
@@ -86,6 +86,6 @@ function show_password() {
 
 
 
-document.getElementById("register").addEventListener("click", validateForm());
-document.getElementById("check1").addEventListener("click", show_password());
-document.getElementById("check2").addEventListener("click", show_password());
+   // document.getElementById("register").addEventListener("click", validateForm());
+//    document.getElementById("check1").addEventListener("click", show_password());
+//    document.getElementById("check2").addEventListener("click", show_password());

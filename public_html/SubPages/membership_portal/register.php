@@ -74,7 +74,7 @@
             }
             ?>
             <section class="container">
-                <form action="process_register.php" method="POST" name="Register" onsubmit="return validateForm()">
+                <form action="process_register.php" method="POST" name="Register" onsubmit="validateForm()">
                     <!--First name-->
                     <div class ="form-group">
                         <label for ="firstname">First Name:</label>
