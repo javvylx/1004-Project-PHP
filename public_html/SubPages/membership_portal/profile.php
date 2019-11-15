@@ -116,84 +116,85 @@ $data = getUserData($_SESSION['memberid']);
         <script src="../../js/jquery-3.3.1.min.js"></script>
         <script src="../../js/bootstrap-4.3.1.js"></script>
 <!--        <script src="../../js/membership_portal/Membership.js">-->
-        </script>
+    </script>
 
-        <?php
-        $conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
-        $databasepwd = "";
-        $data2 = getUserData($_SESSION['memberid']);
-        if ($data2->num_rows > 0) {
-            while ($row = mysqli_fetch_assoc($data2)) {
-                $databasepwd = $row["password"];
-            }
+    <?php
+    $conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
+    $databasepwd = "";
+    $data2 = getUserData($_SESSION['memberid']);
+    if ($data2->num_rows > 0) {
+        while ($row = mysqli_fetch_assoc($data2)) {
+            $databasepwd = $row["password"];
         }
+    }
 
 
-        $password = $_POST['npwd'];
-        $cfmpassword = $_POST['cpwd'];
-        $oldpassword = $_POST['pwd'];
-        $errorMsg = "";
-        $success = true;
-        // Validate password strength
-        $uppercase = preg_match('@[A-Z]@', $password);
-        $lowercase = preg_match('@[a-z]@', $password);
-        $number = preg_match('@[0-9]@', $password);
-        $specialChars = preg_match('@[^\w]@', $password);
-        //$hash_old_pwd = password_hash($oldpassword, PASSWORD_DEFAULT);
+    $password = $_POST['npwd'];
+    $cfmpassword = $_POST['cpwd'];
+    $oldpassword = $_POST['pwd'];
+    $errorMsg = "";
+    $success = true;
+    // Validate password strength
+//    $uppercase = preg_match('@[A-Z]@', $password);
+//    $lowercase = preg_match('@[a-z]@', $password);
+//    $number = preg_match('@[0-9]@', $password);
+//    $specialChars = preg_match('@[^\w]@', $password);
+    //$hash_old_pwd = password_hash($oldpassword, PASSWORD_DEFAULT);
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                
-            if (empty($oldpassword) || empty($password) || empty($cfmpassword)) {
-                
-                $errorMsg = "Please do not leave any fields empty!";
-                echo '<script language="javascript">';
-                echo 'alert(' . $errorMsg . ')';
-                echo '</script>';
-            } else {
-                if (password_verify($oldpassword, $databasepwd)) {
-                    // echo "match";
-                    if (!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
-                        
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+        if (empty($oldpassword) || empty($password) || empty($cfmpassword)) {
+
+            $errorMsg = "Please do not leave any fields empty!";
+            ?>
+
+            <script>
+                alert(' Please do not leave any fields empty!');
+            </script><?php
+        } else {
+            if (password_verify($oldpassword, $databasepwd)) {
+                // echo "match";
+                if ($password == $cfmpassword) {
+
+                    $hash_cpw = password_hash($cfmpassword, PASSWORD_DEFAULT);
+
+                    if ($conn->connect_error) {
+                        echo $errorMsg = "Connection Failed: " . $conn->connect_error;
                     } else {
-                        if ($password == $cfmpassword) {
-                            $errorMsg = "Password should be at least be 8 characters in length and should include at least one upper case letter, one number, and one special character!";
-                            echo '<script language="javascript">';
-                            echo 'alert(' . $errorMsg . ')';
-                            echo '</script>';
-                            $hash_cpw = password_hash($cfmpassword, PASSWORD_DEFAULT);
-
-                            if ($conn->connect_error) {
-                                echo $errorMsg = "Connection Failed: " . $conn->connect_error;
-                            } else {
-                                $sql = "UPDATE wm_users  SET password=' " . $hash_cpw . "' WHERE user_id=" . $_SESSION['memberid'];
-                                //Execute the query
-                                if (!$conn->query($sql)) {
-                                    echo $errorMsg = "Database error: " . $conn->error;
-                                } else {
-                                    $conn->commit();
-                                }
-                                mysqli_close($conn);
-                                $successMsg = "Password Updated Successfully";
-                                echo '<script language="javascript">';
-                                echo 'alert(' . $successMsg . ')';
-                                echo '</script>';
-                            }
+                        $sql = "UPDATE wm_users  SET password=' " . $hash_cpw . "' WHERE user_id=" . $_SESSION['memberid'];
+                        //Execute the query
+                        if (!$conn->query($sql)) {
+                            echo $errorMsg = "Database error: " . $conn->error;
                         } else {
-                            $errorMsg = "Password does not match!";
-                            echo '<script language="javascript">';
-                            echo 'alert(' . $errorMsg . ')';
-                            echo '</script>';
+                            $conn->commit();
                         }
+                        mysqli_close($conn);
+                        $successMsg = "Password Updated Successfully";
+                        ?>
+
+                        <script>
+                            alert('Password Updated Successfully! ');
+                        </script>
+                        <?php
                     }
                 } else {
                     $errorMsg = "Password does not match!";
-                    echo '<script language="javascript">';
-                    echo 'alert(' . $errorMsg . ')';
-                    echo '</script>';
+                    ?>
+                    <script>
+                        alert(' Password does not match! ');
+                    </script><?php
                 }
+            } else {
+
+                $errorMsg = "Password does not match!";
+                ?>
+                <script>
+                    alert(' Password does not match! ');
+                </script><?php
             }
         }
-        ?>
-    </body>
+    }
+    ?>
+</body>
 
 </html>
