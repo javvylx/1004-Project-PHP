@@ -4,10 +4,10 @@ session_start();
 if ($_SESSION["loginflag"] == 1):
     ?>
 
-    <div class="container-fluid-remove-paddings">
+    <header class="container-fluid-remove-paddings">
         <nav class="navbar navbar-expand-lg navbar-light navbar bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../../index.php"><img src="images/homepage/navbar_icon.png" alt="Navbar Icon" title="Navbar Icon" width="150" height="80"/></a>
+                <a class="navbar-brand" href="../../index.php"><img src="../../images/homepage/navbar_icon.png" alt="Navbar Icon" title="Navbar Icon" width="150" height="80"/></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -43,11 +43,11 @@ if ($_SESSION["loginflag"] == 1):
                 </div>
             </div>
         </nav>
-    </div>
+    </header>
 <?php else: ?>
 
     <!--Start of Navigation Bar-->
-    <div class="container-fluid-remove-paddings">
+    <header class="container-fluid-remove-paddings">
         <nav class="navbar navbar-expand-lg navbar-light navbar bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../../index.php"><img src="../../images/homepage/navbar_icon.png" alt="Navbar Icon" title="Navbar Icon" width="150" height="80"/></a>
@@ -82,7 +82,7 @@ if ($_SESSION["loginflag"] == 1):
                 </div>
             </div>
         </nav>
-    </div>
+    </header>
 
     <!--End of Navigation Bar-->
 
