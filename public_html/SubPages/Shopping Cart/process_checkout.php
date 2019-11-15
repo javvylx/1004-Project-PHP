@@ -6,6 +6,10 @@ define("DBNAME", "p5_7");
 define("DBUSER", "p5_7");
 define("DBPASS", "Q2Zp6mlCeq");
 
+if (!isset($_SESSION["loginflag"])) {
+		header("Location: ../../index.php");
+}
+
 $conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
 
 $data = getCartData($_SESSION['memberid']); // return the query result

@@ -7,6 +7,10 @@ define("DBNAME", "p5_7");
 define("DBUSER", "p5_7");
 define("DBPASS", "Q2Zp6mlCeq");
 
+if (!isset($_SESSION["loginflag"])) {
+		header("Location: ../../index.php");
+}
+
 $p_id = $_POST['p_id'];
 $u_id = $_SESSION["memberid"];
 
