@@ -5,15 +5,15 @@
 				<div class="col-xs-12 col-sm-4 col-md-4">
 					<h5>Category</h5>
 					<ul class="list-unstyled links">
-						<li><a href="../Product Overview/Casual Product Page.php"><i class="fa fa-angle-double-right"></i>Casual Watches</a></li>
-						<li><a href="../Product Overview/Sports Product Page.php"><i class="fa fa-angle-double-right"></i>Sport Watches</a></li>
+						<li><a href="../product_overview/casual_product_page.php"><i class="fa fa-angle-double-right"></i>Casual Watches</a></li>
+						<li><a href="../product_overview/sports_product_page.php"><i class="fa fa-angle-double-right"></i>Sport Watches</a></li>
 					</ul>
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4">
 					<h5>Company</h5>
 					<ul class="list-unstyled links">
-						<li><a href="../About Us/About Us.php"><i class="fa fa-angle-double-right"></i>About Us</a></li>
-						<li><a href="../Contact Us/Contact Us.php"><i class="fa fa-angle-double-right"></i>Contact Us</a></li>
+						<li><a href="../about_us/about_us.php"><i class="fa fa-angle-double-right"></i>About Us</a></li>
+						<li><a href="../contact_us/contactus.php"><i class="fa fa-angle-double-right"></i>Contact Us</a></li>
 					</ul>
 				</div>
 			</div>

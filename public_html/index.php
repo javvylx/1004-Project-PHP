@@ -8,7 +8,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" type="image/x-icon" href="images/Favicon/favicon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon/favicon.png">
   <title>Homepage</title>
 
   <!-- Bootstrap & online CSS -->
@@ -36,11 +36,11 @@
 			<li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
 		  </ol>
 		  <div class="carousel-inner" role="listbox">
-			<div class="carousel-item active"><a href="SubPages/Product Overview/Sports Product Page.php"><img class="d-block mx-auto" src="images/HomePage/Carousel Images/Carousel Banner 0.jpg" alt="Discounted Sports Watches Slider 1" title="Discounted Sports Watches Slider"></a>
+			<div class="carousel-item active"><a href="subpages/product_overview/sports_product_page.php"><img class="d-block mx-auto" src="images/homepage/carousel_images/carousel_banner_0.jpg" alt="Discounted Sports Watches Slider 1" title="Discounted Sports Watches Slider"></a>
 			</div>
-			<div class="carousel-item"><a href="SubPages/Individual Product Pages/Sports Casio GBD-800UC-3.php"><img class="d-block mx-auto" src="images/HomePage/Carousel Images/Carousel Banner 1.jpg" alt="Sports Watches Slider 2" title="Discounted Sports Watches Slider"></a>
+			<div class="carousel-item"><a href="SubPages/Individual Product Pages/Sports Casio GBD-800UC-3.php"><img class="d-block mx-auto" src="images/homepage/carousel_images/carousel_banner_1.jpg" alt="Sports Watches Slider 2" title="Discounted Sports Watches Slider"></a>
 			</div>
-			<div class="carousel-item"><a href="SubPages/Individual Product Pages/Casual Pulsar Solar PZ6003X1.php"><img class="d-block mx-auto" src="images/HomePage/Carousel Images/Carousel Banner 2.jpg" alt="Casual Watches Slider 3" title="Casual Watches Slider"></a>
+			<div class="carousel-item"><a href="SubPages/Individual Product Pages/Casual Pulsar Solar PZ6003X1.php"><img class="d-block mx-auto" src="images/homepage/carousel_images/carousel_banner_2.jpg" alt="Casual Watches Slider 3" title="Casual Watches Slider"></a>
 			</div>
 		  </div>
 		  <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next"
@@ -52,12 +52,12 @@
 
 <!-- Start of promotion images -->
 <div class="container-fluid text-center">
-	<img class="promotion-images" src="images/HomePage/Banners/Banner1.jpg" alt="Big Banner for Casual Watches" title="Big Banner for Casual Watches">
+	<img class="promotion-images" src="images/homepage/banners/banner1.jpg" alt="Big Banner for Casual Watches" title="Big Banner for Casual Watches">
 </div>
 
 
 <div class="container-fluid text-center">
-	<img class="promotion-images" src="images/HomePage/Banners/Banner2.jpg" alt="Big Banner for Sports Watches" title="Big Banner for Sports Watches">
+	<img class="promotion-images" src="images/homepage/banners/banner2.jpg" alt="Big Banner for Sports Watches" title="Big Banner for Sports Watches">
 </div>
 
 <div class="container-fluid opening-promo">
@@ -66,18 +66,18 @@
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="textinimage">
-				<img src="images/HomePage/Promotion Images/Sunset watch.jpg" alt="Casual Watches Banner" title="Casual Watch Banner">
+				<img src="images/homepage/promotion_images/sunset_watch.jpg" alt="Casual Watches Banner" title="Casual Watch Banner">
 				<div class="topcentered"><h5><b> Casual Watches Promotion <br></b></h5></div>
 					<div class="centered"><h5>Shop our casual watches at <br> 10% discount</h5> </div>
-					<button class="btn"><a href="SubPages/Product Overview/Casual Product Page.php">Shop Now</a></button>
+					<button class="btn"><a href="subpages/product_overview/casual_product_page.php">Shop Now</a></button>
 				</div>
 			</div>
 			<div class="col-lg-6">
 				<div class="textinimage">
-				<img src="images/HomePage/Promotion Images/Designer Watch Hands.jpg" alt="Sports Watches Banner" title="Sports Watches Banner">
+				<img src="images/homepage/promotion_images/designer_watch_hands.jpg" alt="Sports Watches Banner" title="Sports Watches Banner">
 				<div class="topcentered"><h5><b> Sports Watches Promotion <br></b></h5></div>
 					<div class="centered"><h5>Shop our sports watches at <br> 8% discount</h5> </div>
-					<button class="btn"><a href="SubPages/Product Overview/Sports Product Page.php">Shop Now</a></button>
+					<button class="btn"><a href="subpages/product_overview/sports_product_page.php">Shop Now</a></button>
 				</div>
 			</div>
 		</div>
@@ -93,28 +93,28 @@
             <div class="row">
                 <div class="col-lg-3 justify-content-center">
                     <div class="iconshopping">
-                        <img src="images/HomePage/Shipping Icons/icon_1.png" alt="Free Local Delivery" title="Free Local Delivery">
+                        <img src="images/homepage/shipping_icon/icon_1.png" alt="Free Local Delivery" title="Free Local Delivery">
                         <h4>Free Local Delivery</h4>
 						<p>Swift 1-business day delivery by trusted delivery partner: Ninja Van</p>
                     </div>
                 </div>
                 <div class="col-lg-3 justify-content-center">
                     <div class="iconshopping">
-                        <img src="images/HomePage/Shipping Icons/icon_2.png" alt="Best Price Guaranteed" title="Best Price Guaranteed">
+                        <img src="images/homepage/shipping_icon/icon_2.png" alt="Best Price Guaranteed" title="Best Price Guaranteed">
                         <h4>Best Price Guaranteed</h4>
                         <p>Competitive price point among other retailers</p>
                     </div>
                 </div>
                 <div class="col-lg-3 justify-content-center">
                     <div class="iconshopping">
-                        <img src="images/HomePage/Shipping Icons/icon_3.png" alt="30 Days Return Policy" title="30 Days Return Policy">
+                        <img src="images/homepage/shipping_icon/icon_3.png" alt="30 Days Return Policy" title="30 Days Return Policy">
                         <h4>30 Days Return Policy</h4>
                         <p>Unhappy with our product? Return it within 30 days for full refund</p>
                     </div>
                 </div>
                 <div class="col-lg-3 justify-content-center">
                     <div class="iconshopping">
-                        <img src="images/HomePage/Shipping Icons/icon_4.png" alt="Delicated Hotline" title="Delicated Hotline">
+                        <img src="images/homepage/shipping_icon/icon_1.png" alt="Delicated Hotline" title="Delicated Hotline">
                         <h4>Dedicated Hotline</h4>
                         <p>24/7 phone hotline available for enqueries</p>
                     </div>
