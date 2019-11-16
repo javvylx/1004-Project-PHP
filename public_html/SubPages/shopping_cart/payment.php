@@ -1,3 +1,15 @@
+<!--
+================ DISCLAIMER ================
+This site contains copyrighted material the use of which has not always been specifically authorized by the copyrighted owner.
+In accord with our nonprofit project, we are using these images as examples as to show how the project  web system would look 
+like with actual products to display. We believe this constitutes a 'fair-use' of any copyrighted material as provided in 
+Section 107 of the US Copyright Law. In Accordance with Title 17 U.S.C. Section 107, the materials on this site is distributed
+without profit.
+
+If you wish to use the copyrighted materials from this site for purposes of your own that go beyond fair use, you must obtain 
+permission from the copyrighted owner.
+
+-->
 <!DOCTYPE html>
 <html lang="en">
 <!-- Webpage by Javier Lim Zheng Hao -->
