@@ -95,8 +95,9 @@
 									</div>
 									<div class="form-group mb-3">
 										<input type="password" placeholder="Password" class="form-control rounded-pill border-0 shadow-sm px-4" name="pwd">
-									</div>
-									<button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm" name="login-submit">Sign in</button></a>
+                                                                                <a href='../contact_us/contactus.php' onclick="gotocontact()" >Forgot Password?</a><br>
+                                                                        </div>
+                                                                    <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm" name="login-submit">Sign in</button></a>
 								</form>
 							</div>
 						</div>
@@ -119,7 +120,7 @@
 	<!--JS Plug In-->
 	<script src="../../js/jquery-3.3.1.min.js"></script>
 	<script src="../../js/bootstrap-4.3.1.js"></script>
-
+        <script src='../../js/membership_portal/Membership.js'></script>
 
 </body>
 

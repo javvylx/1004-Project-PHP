@@ -83,7 +83,10 @@ function show_password() {
     }
 }
 
-
+function gotocontact(){
+    alert("Redirecting to Contact Us page. Please send us a request to change your password. Thank you.");
+    location.href = "../contact_us/contactus.php";
+}
 
 
    // document.getElementById("register").addEventListener("click", validateForm());
