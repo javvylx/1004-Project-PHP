@@ -19,7 +19,6 @@ if ($conn->connect_error) {
     $success = false;
 } else {
     $sql = "INSERT INTO wm_shoppingcart(user_id, product_id)VALUES(" . $u_id . ",". $p_id .");";
-    $sql .= "UPDATE wm_products SET quantity = (quantity - 1) WHERE product_id=" . $p_id .";";
 
     if (mysqli_multi_query($conn, $sql) === true) {
         echo "<meta http-equiv='refresh' content='0;URL=shopping_cart.php' />";

@@ -11,6 +11,7 @@ if (!isset($_SESSION["loginflag"])) {
 }
 
 $u_id = $_SESSION["memberid"];
+$data = getCartData($_SESSION['memberid']);
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -43,16 +44,22 @@ $u_id = $_SESSION["memberid"];
             if ($conn->connect_error) {
                 $transaction_msg = "Connection failed: " . $conn->connect_error;
             } else {
-                $sql = "DELETE FROM p5_7.wm_shoppingcart WHERE user_id=". $u_id . ";";
-                $redirect_msg = "Redirecting back to home page...";
-                if ($conn->query($sql) === true) {
-                    $transaction_msg = "Transaction Complete!";
-                }
-                else{
-                    $transaction_msg = "Unable to perform transaction.";
+                if($data->num_rows>0){
+                    $sql = "";
+                    while ($row = mysqli_fetch_assoc($data)){
+                        $sql .= "UPDATE wm_products SET quantity = (quantity - 1) WHERE product_id=".$row["product_id"]."; ";
+                    }
+                    $sql .= "DELETE FROM p5_7.wm_shoppingcart WHERE user_id=". $u_id . ";";
+                    $redirect_msg = "Redirecting back to home page...";
+                    if (mysqli_multi_query($conn, $sql) === true) {
+                        $transaction_msg = "Transaction Complete!";
+                    }
+                    else{
+                        $transaction_msg = "Unable to perform transaction.";
+                    }
                 }
             }
-            echo "<meta http-equiv='refresh' content='4;URL=../../index.php' />";
+            echo "<meta http-equiv='refresh' content='3;URL=../../index.php' />";
         ?>
       <div class="container">
             <div class="jumbotron" id="jumboTron">
