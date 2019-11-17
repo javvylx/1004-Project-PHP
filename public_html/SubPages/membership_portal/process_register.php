@@ -21,6 +21,14 @@ if (isset($_POST['signup-submit'])) {
         header("Location: register.php?error=invalidlastname&fname=".$firstname."$&email=".$email);
         $lastname = sanitize($_POST["lastname"]);
         exit();
+		
+	//(?=.{8,}) #Ensure that string is of at least length 8 | (?=.*[A-Z]) #Match a single capital letter anywhere in string | (?=.*[a-z]) #Match a single small letter anywhere in string | (?=.*\d) #Match a single digit anywhere in string
+		
+	} elseif (!preg_match("/(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])/", $password)) {
+		header("Location: register.php?error=pwdrequirementsfalse&fname=".$firstname."&lname=".$lastname."$&email=".$email);
+		$password = sanitize($_POST["password"]);
+		exit();
+		
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         header("Location: register.php?error=invalidemail&fname".$firstname."&lname=".$lastname);
         $email = sanitize($_POST["email"]);

@@ -127,8 +127,7 @@ $data = getUserData($_SESSION['memberid']);
             $databasepwd = $row["password"];
         }
     }
-
-
+	
     $password = $_POST['npwd'];
     $cfmpassword = $_POST['cpwd'];
     $oldpassword = $_POST['pwd'];
@@ -138,7 +137,7 @@ $data = getUserData($_SESSION['memberid']);
     $uppercase = preg_match('@[A-Z]@', $password);
     $lowercase = preg_match('@[a-z]@', $password);
     $number = preg_match('@[0-9]@', $password);
-    $specialChars = preg_match('@[^\w]@', $password);
+//    $specialChars = preg_match('@[^\w]@', $password);
 
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -153,10 +152,10 @@ $data = getUserData($_SESSION['memberid']);
             </script><?php
         } else {
             if (password_verify($oldpassword, $databasepwd)) {
-                if (!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
-                    $errorMsg = "Password should be at least be 8 characters in length and should include at least one upper case letter, one number, and one special character!";
+                if (!$uppercase || !$lowercase || !$number || strlen($password) < 8) {
+                    $errorMsg = "Password should be at least be 8 characters in length and should include at least one upper case letter, one number!";
                     ?><script>
-                                        alert('Password should be at least be 8 characters in length and should include at least one upper case letter, one number, and one special character! ');
+                                        alert('Password should be at least be 8 characters in length and should include at least one upper case letter, one number!');
                     </script>
                     <?php
                 } else {
@@ -168,7 +167,7 @@ $data = getUserData($_SESSION['memberid']);
                         if ($conn->connect_error) {
                             echo $errorMsg = "Connection Failed: " . $conn->connect_error;
                         } else {
-                            $sql = "UPDATE wm_users  SET password=' " . $hash_cpw . "' WHERE user_id=" . $_SESSION['memberid'];
+                            $sql = "UPDATE wm_users  SET password='" .$hash_cpw . "' WHERE user_id=" .$_SESSION['memberid'];
                             //Execute the query
                             if (!$conn->query($sql)) {
                                 echo $errorMsg = "Database error: " . $conn->error;
@@ -180,7 +179,7 @@ $data = getUserData($_SESSION['memberid']);
                             ?>
 
                             <script>
-                                alert('Password Updated Successfully! ');
+                                alert('Password Updated Successfully!');
                             </script>
                             <?php
                         }
@@ -188,7 +187,7 @@ $data = getUserData($_SESSION['memberid']);
                         $errorMsg = "Password does not match!";
                         ?>
                         <script>
-                            alert(' Password does not match! ');
+                            alert('Password does not match!');
                         </script><?php
                     }
                 }
@@ -197,7 +196,7 @@ $data = getUserData($_SESSION['memberid']);
                 $errorMsg = "Password does not match!";
                 ?>
                 <script>
-                    alert(' Password does not match! ');
+                    alert('Password does not match!');
                 </script><?php
             }
         }

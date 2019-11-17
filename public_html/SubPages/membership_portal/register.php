@@ -45,7 +45,7 @@
         <!--Start of contents -->
 
 
-        <div class="container py-auto px-auto">
+<div class="container py-auto px-auto">
 
             <div class="container" id="page1">
                 <!-- Title of the the page-->
@@ -64,8 +64,14 @@
                     echo '<p class="errormsg"> Error: Invalid Last Name! Only letters and white space allowed!</p>';
                 } elseif ($_GET["error"] == "invalidemail") {
                     echo '<p class="errormsg"> Error: Invalid Email Address Format!</p>';
+					
+				} elseif ($_GET["error"] == "pwdrequirementsfalse") {
+                    echo '<p class="errormsg"> Error: Your password must be more than 8 character and contain at least a number, lowercase and uppercase letter! </p>';
+					
                 } elseif ($_GET["error"] == "passwordcheck") {
                     echo '<p class="errormsg"> Error: Your password do not match!</p>';
+					
+					
                 } elseif ($_GET["error"] == "emailtaken") {
                     echo '<p class="errormsg"> Error: Email address has already been taken! </p>';
                 }
@@ -95,13 +101,13 @@
 
                     <!--Password-->
                     <div class ="form-group">
-                        <label for ="pass">Password:</label>
-                        <input type="password" class ="form-control" name="pwd">
+                        <label for ="pass">Password (MUST be more than 8 characters, contain a number, lowercase and uppercase letter):</label>
+                        <input type="password" class="form-control" name="pwd" minlength="8" pattern=".{8,48}" title="Password must be more than 8 characters!">
                     </div>
                     <!--Confirm Password-->
                     <div class ="form-group">
                         <label for ="confirmpass">Confirm Password:</label>
-                        <input type="password" class ="form-control" name="cpwd">
+                        <input type="password" class ="form-control" name="cpwd" minlength="8" pattern=".{8,48}" title="Password must be more than 8 characters!">
                     </div>
 
                     <!--Agree to terms and conditions-->
@@ -115,45 +121,38 @@
                     <input type="reset" value="Clear" class ="btn btn-danger btn-lg" name="Clear">
 
                     <!--Pop Up -->
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="modal fade" id="mymodal">
-                                    <div class="modal-dialog ">
-                                        <div class="modal-content">
-
-
-                                            <div class="modal-header">
-                                                <h1>Terms and Conditions</h1>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h6>
-
-                                                    Watch.me is an online service provided by Watch.Me Ptd Ltd.
-                                                    <br>
-                                                    You become a member of Watch.Me and be able to use all the services we provide.<br>
-                                                    This Agreement takes effect as soon as you indicate your acceptance of these terms.<br>
-                                                    By accepting the terms, you represent that you are at least the legal age of Singapore.<br>
-                                                    Our products that you purchase can only be use for your own personal use.<br>
-                                                    A violation of any of the Terms will result in an immediate termination of your Services
-
-                                                </h6>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <input class="btn btn-primary" data-dismiss="modal" value="Close">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                </form>
-            </section>
-        </div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="modal fade" id="mymodal">
+							<div class="modal-dialog ">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h1>Terms and Conditions</h1>
+									</div>
+									<div class="modal-body">
+										<h6>
+											Watch.me is an online service provided by Watch.Me Ptd Ltd.
+											<br>
+											You become a member of Watch.Me and be able to use all the services we provide.<br>
+											This Agreement takes effect as soon as you indicate your acceptance of these terms.<br>
+											By accepting the terms, you represent that you are at least the legal age of Singapore.<br>
+											Our products that you purchase can only be use for your own personal use.<br>
+											A violation of any of the Terms will result in an immediate termination of your Services
+										</h6>
+									</div>
+									<div class="modal-footer">
+										<input class="btn btn-primary" data-dismiss="modal" value="Close">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</section>
+</div>
         <!--End of contents -->
 
         <!--footer-->
