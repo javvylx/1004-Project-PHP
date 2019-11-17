@@ -27,16 +27,16 @@
 		header("Location: ../../index.php");
 	}
     ?>
-<!--Start of Breadcrumb -->
-  <div class="container-fluid-remove-paddings">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../../index.php">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Membership Portal</li>
-      </ol>
-    </nav>
-  </div>
-  <!--End of Breadcrumb --><strong></strong>
+	<!--Start of Breadcrumb -->
+	<div class="container-fluid-remove-paddings">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="../../index.php">Home</a></li>
+				<li class="breadcrumb-item active" aria-current="page">Membership Portal</li>
+			</ol>
+		</nav>
+	</div>
+	<!--End of Breadcrumb --><strong></strong>
 	<!--Start of contents -->
 	<div class="container-fluid form">
 		<div class="row no-gutter">
@@ -70,15 +70,15 @@
 							<div class="col-lg-10 col-xl-7 mx-auto">
 								<h3 class="display-4">Watch.Me!</h3>
 								<p class="text-muted mb-4">Sign in into your account</p>
-							<?php
-			
+								<?php
+
 							if(isset($_GET["error"])){
 								if($_GET['error'] == "emptyfields"){
 									echo '<p class="errorloginmsg"> Error: Please fill in all the fields! </p>';
 								}
 								if($_GET['error'] == "wrongpwd"){
 									echo '<p class="errorloginmsg"> Error: Password does not match! Please re-enter password! </p>';
-									
+
 								}
 								if($_GET['error'] == "wrongcred"){
 									echo '<p class="errorloginmsg"> Error: User Credientials not found! Please sign up! </p>';
@@ -88,17 +88,19 @@
 				 			 	echo '<p class="loginsuccessmsg">Congratulations, you have signed in! </p>';
 							}
 							?>
-								
+
 								<form action="process_login.php" method="post">
 									<div class="form-group mb-3">
 										<input type="text" placeholder="Email address" class="form-control rounded-pill border-0 shadow-sm px-4" name="email">
 									</div>
 									<div class="form-group mb-3">
 										<input type="password" placeholder="Password" class="form-control rounded-pill border-0 shadow-sm px-4" name="pwd">
-									<a href='../contact_us/contactus.php' onclick="gotocontact()" >Forgot Password?</a><br>
 									</div>
-								<button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm" name="login-submit">Sign in</button></a>
+									<button type="submit" class="btn btn-primary btn-block text-uppercase mb-3 rounded-pill shadow-sm" name="login-submit">Sign in</button></a>
 								</form>
+								<span class="container d-flex justify-content-end">
+									<a href='../contact_us/contactus.php' onclick="gotocontact()">Forgot Password?</a>
+								</span>
 							</div>
 						</div>
 					</div><!-- End -->
@@ -120,7 +122,7 @@
 	<!--JS Plug In-->
 	<script src="../../js/jquery-3.3.1.min.js"></script>
 	<script src="../../js/bootstrap-4.3.1.js"></script>
-    <script src='../../js/membership_portal/Membership.js'></script>
+	<script src='../../js/membership_portal/Membership.js'></script>
 
 </body>
 

@@ -60,7 +60,7 @@ else{
 
 <!-- Codes to be implemented [Content] -->
 <div class="container col-lg-6 py-5">
-  <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Order summary </div>
+    <h4 class="bg-light rounded-pill px-4 py-3 text-uppercase text-center font-weight-bold">Payment Summary</h4>
     <ul class="list-unstyled">
       <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total </strong><strong>$<?php echo $cost ?></strong></li>
       <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Discount</strong><strong><?php echo  $discount."%" ?></strong></li>

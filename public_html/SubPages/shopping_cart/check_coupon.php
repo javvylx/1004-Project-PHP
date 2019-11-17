@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
             else
             {
               $success = false;
-              $errorMsg .= "Invalid Code";
+              $errorMsg .= "Invalid Coupon";
               $_SESSION ["coupon"] = false;
             }
         }
@@ -44,18 +44,18 @@ if (isset($_POST['submit'])) {
 ?>
 
 <?php if (isset($_POST['submit'])):  ?>
-  <?php if ($success): ?>
-        <script>
-        let code = '<?php echo $coupon; ?>' ;
-        alert("Coupon Code: " + code +  " is valid");
-        window.location.href = "shopping_cart.php";
-        </script>
+<?php if ($success): ?>
+<script>
+  let code = '<?php echo $coupon; ?>';
+  alert("Coupon Code: " + code + " is Applied");
+  window.location.href = "shopping_cart.php";
+</script>
 
-      <?php else: ?>
-        <script>
-        let error = '<?php echo $errorMsg; ?>';
-        alert ("The following error occured: " + error);
-        window.location.href = "shopping_cart.php";
-        </script>
-  <?php endif; ?>
+<?php else: ?>
+<script>
+  let error = '<?php echo $errorMsg; ?>';
+  alert("The following error occured: " + error);
+  window.location.href = "shopping_cart.php";
+</script>
+<?php endif; ?>
 <?php endif; ?>
