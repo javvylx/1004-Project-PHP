@@ -1,12 +1,12 @@
 <!--
 ================ DISCLAIMER ================
 This site contains copyrighted material the use of which has not always been specifically authorized by the copyrighted owner.
-In accord with our nonprofit project, we are using these images as examples as to show how the project  web system would look 
-like with actual products to display. We believe this constitutes a 'fair-use' of any copyrighted material as provided in 
+In accord with our nonprofit project, we are using these images as examples as to show how the project  web system would look
+like with actual products to display. We believe this constitutes a 'fair-use' of any copyrighted material as provided in
 Section 107 of the US Copyright Law. In Accordance with Title 17 U.S.C. Section 107, the materials on this site is distributed
 without profit.
 
-If you wish to use the copyrighted materials from this site for purposes of your own that go beyond fair use, you must obtain 
+If you wish to use the copyrighted materials from this site for purposes of your own that go beyond fair use, you must obtain
 permission from the copyrighted owner.
 
 -->
@@ -42,7 +42,7 @@ permission from the copyrighted owner.
 	<nav aria-label="breadcrumb">
 	  <ol class="breadcrumb">
 		<li class="breadcrumb-item"><a href="../../index.php">Home</a></li>
-		<li class="breadcrumb-item active" aria-current="page">About Us</li>
+		<li class="breadcrumb-item active">About Us</li>
 	  </ol>
 	</nav>
 </div>
@@ -91,28 +91,28 @@ permission from the copyrighted owner.
       <div class="row text-center">
         <div class="col-xl-3 col-sm-6 mb-5 height">
           <div class="bg-white rounded shadow-sm py-5 px-4">
-            <img src="../../images/about_us/Individual Photos/Javier.jpeg" alt="CEO Founder of Watch.Me 1" title="CEO Founder of Watch.Me" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <img src="../../images/about_us/Individual%20Photos/Javier.jpeg" alt="CEO Founder of Watch.Me 1" title="CEO Founder of Watch.Me" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
             <h6 class="mb-0">Lim Zheng Hao, Javier </h6><span class="small text-uppercase text-muted">CEO - Founder</span>
           </div>
         </div>
 
         <div class="col-xl-3 col-sm-6 mb-5 height">
           <div class="bg-white rounded shadow-sm py-5 px-4">
-            <img src="../../images/about_us/Individual Photos/Justin.jpeg" alt="CEO Founder of Watch.Me 2" title="CEO Founder of Watch.Me" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <img src="../../images/about_us/Individual%20Photos/Justin.jpeg" alt="CEO Founder of Watch.Me 2" title="CEO Founder of Watch.Me" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
             <h6 class="mb-0">Lim Keat Hui, Justin</h6><span class="small text-uppercase text-muted">CEO - Founder</span>
           </div>
         </div>
 
         <div class="col-xl-3 col-sm-6 mb-5 height">
           <div class="bg-white rounded shadow-sm py-5 px-4">
-            <img src="../../images/about_us/Individual Photos/KAII.jpeg" alt="CEO Founder of Watch.Me 3" title="CEO Founder of Watch.Me" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <img src="../../images/about_us/Individual%20Photos/KAII.jpeg" alt="CEO Founder of Watch.Me 3" title="CEO Founder of Watch.Me" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
             <h6 class="mb-0">Kyle Wong Kaige</h6><span class="small text-uppercase text-muted">CEO - Founder</span>
           </div>
         </div>
 
 		 <div class="col-xl-3 col-sm-6 mb-5 height">
           <div class="bg-white rounded shadow-sm py-5 px-4">
-            <img src="../../images/about_us/Individual Photos/Paul.jpeg" alt="CEO Founder of Watch.Me 4" title="CEO Founder of Watch.Me" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <img src="../../images/about_us/Individual%20Photos/Paul.jpeg" alt="CEO Founder of Watch.Me 4" title="CEO Founder of Watch.Me" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
             <h6 class="mb-0">Amitpaul Singh Sandhu</h6><span class="small text-uppercase text-muted">CEO - Founder</span>
           </div>
         </div>

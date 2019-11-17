@@ -1,12 +1,12 @@
 <!--
 ================ DISCLAIMER ================
 This site contains copyrighted material the use of which has not always been specifically authorized by the copyrighted owner.
-In accord with our nonprofit project, we are using these images as examples as to show how the project  web system would look 
-like with actual products to display. We believe this constitutes a 'fair-use' of any copyrighted material as provided in 
+In accord with our nonprofit project, we are using these images as examples as to show how the project  web system would look
+like with actual products to display. We believe this constitutes a 'fair-use' of any copyrighted material as provided in
 Section 107 of the US Copyright Law. In Accordance with Title 17 U.S.C. Section 107, the materials on this site is distributed
 without profit.
 
-If you wish to use the copyrighted materials from this site for purposes of your own that go beyond fair use, you must obtain 
+If you wish to use the copyrighted materials from this site for purposes of your own that go beyond fair use, you must obtain
 permission from the copyrighted owner.
 
 -->
@@ -42,7 +42,7 @@ permission from the copyrighted owner.
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="../../index.php">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+        <li class="breadcrumb-item active">Contact Us</li>
       </ol>
     </nav>
   </div>
@@ -94,7 +94,7 @@ permission from the copyrighted owner.
       </div>
       <br>
       <div>
-        <textarea name="message" class="form-control2 center" rows="5" placeholder="Message" required '(?=.*[a-z])(?=.*[A-Z]).{5,}'></textarea>
+        <textarea name="message" class="form-control2 center" rows="5" placeholder="Message" required pattern='(?=.*[a-z])(?=.*[A-Z]).{5,}'></textarea>
       </div>
 
       <input type="submit" value="Submit" class="btn btn-danger padding2 center">
