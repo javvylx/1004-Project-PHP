@@ -29,8 +29,11 @@
     <div class="row"> <!--Credits & Copyright Section-->
       <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
         <p><u><a href="index.php">Watch.me Pte Ltd Corporation</a></u></p>
-        <p class="h6">&copy All Rights Reversed.</p>
-        <p class="h6"><i class="fa fa-heart"></i> A huge thank you to <a href="https://shopino.com.ng/home" target="_blank"><u>Shopino</u></a> & <a href="https://www.watchshop.com" target="_blank"><u>Watch Shop</u></a> for the Website Design Inspiration & Watch Images </p>
+        <p class="h6">&copy; All Rights Reversed.</p>
+		  
+        <p class="h6"><i class="fa fa-heart"></i> A huge thank you to <a href="https://shopino.com.ng/home" target="_blank"><u>Shopino</u></a>and <a href="https://www.watchshop.com" target="_blank"><u>Watch Shop</u></a> for the Website Design Inspiration and Watch Images </p>
+		  
+		 <p class="h6">Disclaimer: The watch products that are copyrighted and listed in this website are from: <a href="https://www.casio.com/products/watches" target="_blank"><u>Casio</u></a> and <a href="https://www.hugoboss.com/men-watches/" target="_blank"><u>Hugo Boss</u></a>.</p>
       </div>
       <hr>
     </div>

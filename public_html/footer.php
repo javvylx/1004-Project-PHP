@@ -30,8 +30,9 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
 					<p><u><a href="../../index.php">Watch.me Pte Ltd Corporation</a></u></p>
-					<p class="h6">&copy All Rights Reversed.</p>
-					<p class="h6"><i class="fa fa-heart"></i> A huge thank you to <a href="https://shopino.com.ng/home" target="_blank"><u>Shopino</u></a> & <a href="https://www.watchshop.com" target="_blank"><u>Watch Shop</u></a> for the Website Design Inspiration & Watch Images </p>
+					<p class="h6">&copy; All Rights Reversed.</p>
+					<p class="h6"><i class="fa fa-heart"></i> A huge thank you to <a href="https://shopino.com.ng/home" target="_blank"><u>Shopino</u></a> and <a href="https://www.watchshop.com" target="_blank"><u>Watch Shop</u></a> for the Website Design Inspiration and Watch Images </p>
+					<p class="h6">&copy; All Rights Reversed.</p>
 				</div>
 				<hr>
 			</div>
