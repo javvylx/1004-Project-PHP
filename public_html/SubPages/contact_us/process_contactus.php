@@ -66,11 +66,11 @@ else{
 <?php if ($success): ?>
   <script>
   alert("Good News! Message has been successfully send.");
-    window.location.href = "Contact Us.php";
+    window.location.href = "contactus.php";
     </script>
 <?php else:  ?>
   <script>
   alert("Error: Message was not sent successfully.");
-  window.location.href = "Contact Us.php";
+  window.location.href = "contactus.php";
   </script>
 <?php endif; ?>
