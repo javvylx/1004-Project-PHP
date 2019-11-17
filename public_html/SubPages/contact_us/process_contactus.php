@@ -41,21 +41,16 @@ if (check_empty($fname) || check_empty($email) || check_empty($subject) || check
 }
 else{
   // Send to email after all the sanitization
-  $company_email = "limkhj197@gmail.com";
+  $company_email = "limkhj197@gmai.com";
 
-  // Email Headers
-  $headers = "MIME-Version: 1.0" ."\r\n";
-  $headers .="Content-Type:text/html;charset=UTF-8" . "\r\n";
-  $headers .= "From: ". $email . "\r\n";
+  $headers = "MIME-Version: 1.0" . "\r\n";
+  $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+  $headers .= "From: ".$email;
 
   $message = wordwrap($message,70); //n wordwrap if more than 70 char long
   $message = str_replace("\n.", "\n..", $message); // replace "." with ".."
 
-  $body = '<h4>Name: '. $fname.'</h4>';
-  $body .= '<h4>Email: '. $email.'</h4>';
-  $body .= '<h4>Message: </h4><p>'. $message.'</p>';
-
-  echo $email;
+  $body = '<h4>Message</h4><p>'. $message.'</p>';
 
   if (mail($company_email,$subject,$body,$headers))
   {
