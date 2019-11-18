@@ -36,7 +36,6 @@ $data = getUserData($_SESSION['memberid']);
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="../../index.php">Home</a></li>
-                    <li class="breadcrumb-item"><a href="login_page.php">Membership Portal</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Profile</li>
                 </ol>
             </nav>
@@ -127,7 +126,7 @@ $data = getUserData($_SESSION['memberid']);
             $databasepwd = $row["password"];
         }
     }
-	
+
     $password = $_POST['npwd'];
     $cfmpassword = $_POST['cpwd'];
     $oldpassword = $_POST['pwd'];

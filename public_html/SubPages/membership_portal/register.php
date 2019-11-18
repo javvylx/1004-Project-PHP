@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Static webpage by Amitpaul Singh Sandhu -->
-	
-<!-- PHP page done by Lim Zheng Hao, Javier -->	
+<!-- Webpage by Amitpaul Singh Sandhu -->
+
+<!-- PHP pack done by Lim Zheng Hao, Javier -->
 
 <head>
   <meta name="Description" content="Sign Up">
@@ -37,7 +37,6 @@
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="../../index.php">Home</a></li>
-        <li class="breadcrumb-item"><a href="login_page.php">Membership Portal</a></li>
         <li class="breadcrumb-item active" aria-current="page">Sign Up</li>
       </ol>
     </nav>

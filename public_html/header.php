@@ -74,7 +74,7 @@ if ($_SESSION["loginflag"] == 1):
                         </li>
 
                         <li class="nav-item">
-                            <a href="../membership_portal/login_page.php" class="nav-link m-2 menu-item">Membership Portal</a>
+                            <a href="../membership_portal/login_page.php" class="nav-link m-2 menu-item">Login Portal</a>
                         </li>
 
 

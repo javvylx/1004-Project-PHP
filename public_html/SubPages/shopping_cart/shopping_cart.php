@@ -155,7 +155,7 @@ $shipping = 10.00;
         <form action="check_coupon.php" method="post">
 
           <div class="input-group mb-4 border rounded-pill p-2">
-            <input type="text" name ="coupon" placeholder="Check Coupon" aria-describedby="button-addon3" class="form-control border-0">
+            <input type="text" name ="coupon" placeholder="Coupon Code" aria-describedby="button-addon3" class="form-control border-0">
               <div class="input-group-append border-0">
                 <button type="submit" name="submit" value="Apply Coupon" class="btn btn-dark px-4 rounded-pill">Apply Coupon</button>
             </div>

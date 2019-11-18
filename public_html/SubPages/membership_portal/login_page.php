@@ -2,15 +2,15 @@
 <html lang="en">
 <!-- Static Webpage by Amitpaul Singh Sandhu -->
 
-<!-- PHP page done by Lim Zheng Hao, Javier -->	
-	
+<!-- PHP page done by Lim Zheng Hao, Javier -->
+
 <head>
 	<meta name="Description" content="Watch.Me Membership Portal">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" type="image/x-icon" href="../../images/favicon/favicon.png">
-	<title>Membership Portal</title>
+	<title>Login Portal</title>
 
 	<!-- Bootstrap -->
 	<link href="../../css/bootstrap-css.min.css" rel="stylesheet" type="text/css" />
@@ -34,7 +34,7 @@
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item"><a href="../../index.php">Home</a></li>
-				<li class="breadcrumb-item active" aria-current="page">Membership Portal</li>
+				<li class="breadcrumb-item active" aria-current="page">Login Portal</li>
 			</ol>
 		</nav>
 	</div>
