@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Webpage by Amitpaul Singh Sandhu -->
+<!-- Static Webpage by Amitpaul Singh Sandhu -->
 
+<!-- PHP page done by Lim Zheng Hao, Javier -->	
+	
 <head>
 	<meta name="Description" content="Watch.Me Membership Portal">
 	<meta charset="utf-8">

@@ -1,12 +1,12 @@
 /* CSS files compiled by: Lim Zheng Hao, Javier | Lim Keat Hui, Justin | Kyle Wong Kaige | Amitpaul Singh Sandhu
 
-Skeleton: Line 13 to Line 124             Done by: Lim Zheng Hao, Javier
-Landing Page: Line 127 to 242            Done by: Lim Zheng Hao, Javier
-Individual Products: Line 244 to 335      Done by: Kyle Wong Kaige
-Membership Portal: Line 337 to 368        Done by: Amitpaul Singh Sandhu
-Product Overview: Line 370 to 458         Done by: Lim Zheng Hao, Javier
-Shopping Cart: Line 460 to 467            Done by: Lim Keat Hui, Justin
-Contact Us: Line 470 to 524               Done by: Lim Keat Hui, Justin
+Skeleton:            		Done by: Lim Zheng Hao, Javier
+Landing Page:            	Done by: Lim Zheng Hao, Javier
+Individual Products:      	Done by: Kyle Wong Kaige
+Membership Portal:          Done by: Amitpaul Singh Sandhu
+Product Overview:           Done by: Lim Zheng Hao, Javier
+Shopping Cart:              Done by: Lim Keat Hui, Justin
+Contact Us:                 Done by: Lim Keat Hui, Justin
 
 */
 
@@ -118,6 +118,10 @@ section {
 .breadcrumb{
 	margin-top:10px;
 	font-size:21px;
+}
+
+.h5foot{
+	color:white;
 }
 /*End of BreadCrumb */
 
