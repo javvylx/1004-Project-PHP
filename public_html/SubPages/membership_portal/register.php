@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Webpage by Amitpaul Singh Sandhu -->
+<!-- Static webpage by Amitpaul Singh Sandhu -->
 	
-<!-- PHP pack done by Lim Zheng Hao, Javier -->	
+<!-- PHP page done by Lim Zheng Hao, Javier -->	
 
 <head>
   <meta name="Description" content="Sign Up">
@@ -56,7 +56,7 @@
         <h2>Create your account</h2>
       </div>
     </div>
-    <?php
+    <?php //Creates an error message on top of the form 
             if (isset($_GET["error"])) {
                 if ($_GET['error'] == "emptyfields") {
                     echo "<p class='errormsg'> Error: Please fill in all the fields! </p>";
@@ -72,12 +72,12 @@
 
                 } elseif ($_GET["error"] == "passwordcheck") {
                     echo '<p class="errormsg"> Error: Your password do not match!</p>';
-
-
+					
                 } elseif ($_GET["error"] == "emailtaken") {
                     echo '<p class="errormsg"> Error: Email address has already been taken! </p>';
                 }
-            } elseif ($_GET["signup"] == "success") {
+				// Creates an success message if the new user was created.
+            	} elseif ($_GET["signup"] == "success") {
                 echo "<p class='errormsg'>Thank you for signing up for Watch Me! Click here to return to <a href='login_page.php'><u>Login Page</u></a></p>";
             }
             ?>
