@@ -52,10 +52,10 @@ permission from the copyrighted owner.
         <div class="carousel-item active"><a href="subpages/product_overview/sports_product_page.php"><img class="d-block mx-auto" src="images/homepage/carousel_images/carousel_banner_0.jpg" alt="Discounted Sports Watches Slider 1"
               title="Discounted Sports Watches Slider"></a>
         </div>
-        <div class="carousel-item"><a href="SubPages/Individual%20Product%20Pages/Sports%20Casio%20GBD-800UC-3.php"><img class="d-block mx-auto" src="images/homepage/carousel_images/carousel_banner_1.jpg" alt="Sports Watches Slider 2"
+        <div class="carousel-item"><a href="subpages/product_overview/sports_product_page.php"><img class="d-block mx-auto" src="images/homepage/carousel_images/carousel_banner_1.jpg" alt="Sports Watches Slider 2"
               title="Discounted Sports Watches Slider"></a>
         </div>
-        <div class="carousel-item"><a href="SubPages/Individual%20Product%20Pages/Casual%20Pulsar%20Solar%20PZ6003X1.php"><img class="d-block mx-auto" src="images/homepage/carousel_images/carousel_banner_2.jpg" alt="Casual Watches Slider 3"
+        <div class="carousel-item"><a href="subpages/product_overview/casual_product_page.php"><img class="d-block mx-auto" src="images/homepage/carousel_images/carousel_banner_2.jpg" alt="Casual Watches Slider 3"
               title="Casual Watches Slider"></a>
         </div>
       </div>
