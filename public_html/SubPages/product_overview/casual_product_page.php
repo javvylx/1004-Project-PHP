@@ -35,7 +35,7 @@ permission from the copyrighted owner.
 <body>
 
 	<!-- Header-->
-	<?php include "../../header.php"; ?>
+	<?php include "../../header.php"	?>
 	<!-- Header-->
 
 <!--Start of Breadcrumb -->
@@ -59,8 +59,8 @@ permission from the copyrighted owner.
             <div class="productoverview">
               <div class="producthoverimage">
                   <a href="../product_pages/casual_hugojump_watch.php">
-                      <img class="pic-1" src="../../images/casual_watches/2/casual_2_hugo jump_watch 1530028.jpg" alt="Hugo Jump Watch 1530028 Watch Face" title="Hugo Jump Watch 1530028 Watch Face"> <!--Image 2-->
-                      <img class="pic-2" src="../../images/casual_watches/2/casual_2_hugo _jump_watch 1530028(2).jpg" alt="Hugo Jump Watch 1530028 Watch Strap" title="Hugo Jump Watch 1530028 Watch Strap"><!--Image 2-->
+                      <img class="pic-1" src="../../images/casual_watches/2/casual_2_hugo_jump_watch_1530028.jpg" alt="Hugo Jump Watch 1530028 Watch Face" title="Hugo Jump Watch 1530028 Watch Face"> <!--Image 2-->
+                      <img class="pic-2" src="../../images/casual_watches/2/casual_2_hugo_jump_watch_1530028(2).jpg" alt="Hugo Jump Watch 1530028 Watch Strap" title="Hugo Jump Watch 1530028 Watch Strap"><!--Image 2-->
                   </a>
                     <form action="../shopping_cart/process_addtocart.php" method="post">
                         <?php  
@@ -110,13 +110,11 @@ permission from the copyrighted owner.
 
 <!--footer-->
 <?php include "../../footer.php" ?>
-<!--footter-->
-
+<!--footer-->
 
 
 <!--JS Plug In-->
       <script src="../../js/jquery-3.3.1.min.js"></script>
       <script src="../../js/bootstrap-4.3.1.js"></script>
-
 </body>
 </html>

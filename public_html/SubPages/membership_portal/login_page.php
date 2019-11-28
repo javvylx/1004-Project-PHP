@@ -98,7 +98,7 @@
 									<div class="form-group mb-3">
 										<input type="password" placeholder="Password" class="form-control rounded-pill border-0 shadow-sm px-4" name="pwd">
 									</div>
-									<button type="submit" class="btn btn-primary btn-block text-uppercase mb-3 rounded-pill shadow-sm" name="login-submit">Sign in</button></a>
+									<button type="submit" class="btn btn-primary btn-block text-uppercase mb-3 rounded-pill shadow-sm" name="login-submit">Sign in</button>
 								</form>
 								<span class="container d-flex justify-content-end">
 									<a href='../contact_us/contactus.php' onclick="gotocontact()">Forgot Password?</a>

@@ -115,7 +115,6 @@ $data = getUserData($_SESSION['memberid']);
         <script src="../../js/jquery-3.3.1.min.js"></script>
         <script src="../../js/bootstrap-4.3.1.js"></script>
 <!--        <script src="../../js/membership_portal/Membership.js">-->
-    </script>
 
     <?php
     $conn = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);

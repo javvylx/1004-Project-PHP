@@ -129,7 +129,7 @@
                 <div class="modal-dialog ">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h1>Terms and Conditions</h1>
+                      <h2>Terms and Conditions</h2>
                     </div>
                     <div class="modal-body">
                       <h6>

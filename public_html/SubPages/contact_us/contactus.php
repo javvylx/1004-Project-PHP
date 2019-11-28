@@ -34,7 +34,7 @@ permission from the copyrighted owner.
 <body>
 
   <!-- Header-->
-  <?php include "../../header.php"; ?>
+  <?php include "../../header.php"?>
   <!-- Header-->
 
   <!--Start of Breadcrumb -->
@@ -61,7 +61,7 @@ permission from the copyrighted owner.
     <?php
     if (isset($_GET["error"])) {
         if ($_GET['error'] == "emptyfields") {
-            echo "<p class='errormsg'> Error: Please fill in all the fields! </p>";
+            echo '<p class="errormsg"> Error: Please fill in all the fields! </p>';
         }  elseif ($_GET["error"] == "invalidfirstname") {
             echo '<p class="errormsg"> Error: Invalid First Name! Only letters and white space allowed!</p>';
         } elseif ($_GET["error"] == "invalidlastname") {
@@ -74,7 +74,7 @@ permission from the copyrighted owner.
             echo '<p class="errormsg"> Error: Invalid Message</p>';
         }
     }
-    ?>
+?>
 
     <form action="process_contactus.php" method="POST">
       <div>

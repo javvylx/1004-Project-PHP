@@ -34,7 +34,7 @@ permission from the copyrighted owner.
 <body>
 
 	<!-- Header-->
-	<?php include "../../header.php"; ?>
+	<?php include "../../header.php"?>
 	<!-- Header-->
 
 <!--Start of Breadcrumb -->

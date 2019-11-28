@@ -16,8 +16,8 @@ permission from the copyrighted owner.
 <!-- Webpage, individual webpages compilation/organization & skeleton file done by Lim Zheng Hao, Javier -->
 
 <head>
-  <meta name="Description" content="Startup Company: Watch.Me! selling brands such as Hugo Boss, Casio & Pulsar Watches.">
   <meta charset="utf-8">
+  <meta name="Description" content="Startup Company: Watch.Me! selling brands such as Hugo Boss, Casio & Pulsar Watches.">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon/favicon.png">
@@ -90,7 +90,7 @@ permission from the copyrighted owner.
             <div class="centered">
               <h5>Shop our casual watches at <br> 10% discount</h5>
             </div>
-            <button class="btn"><a href="subpages/product_overview/casual_product_page.php">Shop Now</a></button>
+            <a href="subpages/product_overview/casual_product_page.php"><button class="btn">Shop Now</button></a>
           </div>
         </div>
         <div class="col-lg-6">
@@ -102,7 +102,7 @@ permission from the copyrighted owner.
             <div class="centered">
               <h5>Shop our sports watches at <br> 8% discount</h5>
             </div>
-            <button class="btn"><a href="subpages/product_overview/sports_product_page.php">Shop Now</a></button>
+            <a href="subpages/product_overview/sports_product_page.php"><button class="btn">Shop Now</button></a>
           </div>
         </div>
       </div>

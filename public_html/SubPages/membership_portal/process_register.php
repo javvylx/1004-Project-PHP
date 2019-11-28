@@ -80,7 +80,6 @@ if (isset($_POST['signup-submit'])) {
                     mysqli_stmt_bind_param($stmt, "ssss", $firstname, $lastname, $email, $hashedpwd);
                     mysqli_stmt_execute($stmt);
 					
-					
                     header("Location: register.php?signup=success");
 
                     exit();

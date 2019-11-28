@@ -25,8 +25,8 @@ $watchData = getWatchdata(1);
 $row = $watchData->fetch_assoc();
 ?>
 <head>
-  <meta name="Description" content="Watch.Me Casual Hugo Boss Jump Watch">
   <meta charset="utf-8">
+  <meta name="Description" content="Watch.Me Casual Hugo Boss Jump Watch">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/x-icon" href="../../images/favicon/favicon.png">
@@ -78,10 +78,10 @@ $row = $watchData->fetch_assoc();
                             Hopefully capable of implementing a for loop for each image of the item into the carousel later on
                         -->
                         <div class="carousel-item carousel-product active">
-                            <img class="d-block mx-auto" src="../../images/casual_watches/2/casual_2_hugo jump_watch 1530028.jpg" alt="Hugo Boss 1530028 Jump Watch Face" title="Hugo Boss 1530028 Jump Watch Face">
+                            <img class="d-block mx-auto" src="../../images/casual_watches/2/casual_2_hugo_jump_watch_1530028.jpg" alt="Hugo Boss 1530028 Jump Watch Face" title="Hugo Boss 1530028 Jump Watch Face">
                         </div>
                         <div class="carousel-item carousel-product">
-                            <img class="d-block mx-auto" src="../../images/casual_watches/2/casual_2_hugo _jump_watch 1530028(2).jpg" alt="Hugo Boss 1530028 Jump Watch Strap" title="Hugo Boss 1530028 Jump Watch Strap">
+                            <img class="d-block mx-auto" src="../../images/casual_watches/2/casual_2_hugo_jump_watch_1530028(2).jpg" alt="Hugo Boss 1530028 Jump Watch Strap" title="Hugo Boss 1530028 Jump Watch Strap">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>

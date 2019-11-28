@@ -34,7 +34,7 @@ permission from the copyrighted owner.
 
 <body>
   <!-- Header-->
-	<?php include "../../header.php"; ?>
+	<?php include "../../header.php"?>
 	<!-- Header-->
 
 <!--Start of Breadcrumb -->
@@ -57,7 +57,7 @@ permission from the copyrighted owner.
         <div class="col-md-3 col-sm-6">
             <div class="productoverview">
                 <div class="producthoverimage">
-                    <a href="../product_pages/sports casio dw 5900-1er.php">
+                    <a href="../product_pages/sports_casio_dw_5900-1er.php">
                         <img class="pic-1" src="../../images/sports_watches/1/sports_1_dw-5900-1er.jpg" alt="Casio DW-5900-1ER Watch Face" title="Casio DW-5900-1ER Watch Face"> <!--Image 1-->
                         <img class="pic-2" src="../../images/sports_watches/1/sports_1_dw-5900-1er(2).jpg" alt="Casio DW-5900-1ER Watch Strap" title="Casio DW-5900-1ER Watch Strap"> <!--Image 1-->
                     </a>
@@ -69,7 +69,7 @@ permission from the copyrighted owner.
                     </form>
                 </div>
                 <div class="product-content">
-                    <h3 class="title"><a href="../product_pages/sports casio dw 5900-1er.php">Casio DW-5900-1ER</a></h3>
+                    <h3 class="title"><a href="../product_pages/sports_casio_dw_5900-1er.php">Casio DW-5900-1ER</a></h3>
                     <span class="price">$134.40</span>
                 </div>
             </div>
@@ -80,9 +80,9 @@ permission from the copyrighted owner.
         <div class="col-md-3 col-sm-6">
             <div class="productoverview">
                 <div class="producthoverimage">
-                    <a href="../product_pages/sports casio swv-58u-1avef.php">
+                    <a href="../product_pages/sports_casio_swv-58u-1avef.php">
                         <img class="pic-1" src="../../images/sports_watches/3/sports_3_casio_swv-58u-1avef(2).jpg" alt="Casio SWV-58U-1AVEF Watch Face" title="Casio SGW-100-1VEF Watch Face"> <!--Image 3-->
-                        <img class="pic-2" src="../../images/sports_watches/3/sports 3_casio_swv-58u-1avef.jpg" alt="Casio SWV-58U-1AVEF Watch Strap" title="Casio SGW-100-1VEF Watch Strap"> <!--Image 3-->
+                        <img class="pic-2" src="../../images/sports_watches/3/sports_3_casio_swv-58u-1avef.jpg" alt="Casio SWV-58U-1AVEF Watch Strap" title="Casio SGW-100-1VEF Watch Strap"> <!--Image 3-->
                     </a>
                     <form action="../shopping_cart/process_addtocart.php" method="post">
                         <?php  
@@ -92,7 +92,7 @@ permission from the copyrighted owner.
                     </form>
                 </div>
                 <div class="product-content">
-                    <h3 class="title"><a href="../product_pages/sports casio swv-58u-1avef.php">Casio SWV-58U-1AVEF</a></h3>
+                    <h3 class="title"><a href="../product_pages/sports_casio_swv-58u-1avef.php">Casio SWV-58U-1AVEF</a></h3>
                     <span class="price">$96.67</span>
                 </div>
             </div>
